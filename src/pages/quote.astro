@@ -1,0 +1,143 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout
+  title="Free Hot Water Quote | Berwick, Cranbourne, Endeavour Hills | (03) 9003 0108"
+  description="Get a free fixed-price quote on a gas, heat-pump, solar or electric hot water replacement — or a same-day repair — anywhere across South East Melbourne. We lodge the $1,000 Solar Vic rebate on your behalf."
+  canonical="https://sehotwater.com.au/quote/">
+
+  <section class="hero" style="padding: 2.5rem 0 3rem;">
+    <div class="hero-inner">
+      <span class="hero-eyebrow">Free Quote</span>
+      <h1>No hot water? Quote in 24 hours.</h1>
+      <p class="hero-sub">
+        Tell us about your existing unit and your household. We&rsquo;ll come on
+        site, size the right replacement, walk you through gas vs heat-pump vs
+        solar, and lodge the $1,000 Solar Vic rebate paperwork on your behalf.
+        Fixed-price written quote, no obligation.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="form-wrap">
+        <div class="form-card">
+          <form name="quote" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thanks/">
+            <input type="hidden" name="form-name" value="quote" />
+            <p style="display:none;"><label>Don&rsquo;t fill this out: <input name="bot-field" /></label></p>
+
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+
+            <label for="phone">Phone number</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="04xx xxx xxx" />
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+
+            <label for="suburb">Suburb / postcode</label>
+            <input id="suburb" name="suburb" type="text" autocomplete="address-level2" required placeholder="e.g. Berwick 3806, Cranbourne 3977, Endeavour Hills 3802" />
+
+            <label for="format">What are you after?</label>
+            <select id="format" name="format">
+              <option value="not-sure">Not sure &mdash; want a recommendation</option>
+              <option value="emergency-repair">Emergency repair &mdash; no hot water right now</option>
+              <option value="gas-instant">Gas instantaneous replacement (Rinnai Infinity, Bosch Highflow)</option>
+              <option value="gas-storage">Gas storage replacement (Rheem, Rinnai, Bosch)</option>
+              <option value="heat-pump">Heat-pump install (Sanden, Reclaim, Stiebel Eltron)</option>
+              <option value="solar">Solar hot water install (Apricus, Rheem Loline, Edwards)</option>
+              <option value="electric-storage">Electric off-peak storage replacement</option>
+              <option value="electric-to-heatpump">Electric to heat-pump conversion</option>
+              <option value="solar-tank-only">Solar tank replacement (keeping existing panels)</option>
+            </select>
+
+            <label for="purpose">Current situation</label>
+            <select id="purpose" name="purpose">
+              <option value="no-hot-water">No hot water at all</option>
+              <option value="lukewarm">Lukewarm or running out fast</option>
+              <option value="leaking">Tank or pipework leaking</option>
+              <option value="pilot">Pilot light keeps going out</option>
+              <option value="noisy">Banging, rumbling or pressure noises</option>
+              <option value="old-unit">Unit still works but it&rsquo;s 10+ years old</option>
+              <option value="planning-upgrade">Planning ahead &mdash; want to compare options</option>
+              <option value="other">Other</option>
+            </select>
+
+            <label for="size">Household size</label>
+            <select id="size" name="size">
+              <option value="not-sure">Not sure</option>
+              <option value="1-2">1&ndash;2 people</option>
+              <option value="3">3 people</option>
+              <option value="4">4 people</option>
+              <option value="5">5 people</option>
+              <option value="6plus">6+ people</option>
+            </select>
+
+            <label for="existing-system">Existing system type</label>
+            <select id="existing-system" name="existing-system">
+              <option value="not-sure">Not sure</option>
+              <option value="gas-storage">Gas storage (cylinder outside / in laundry)</option>
+              <option value="gas-instant">Gas instantaneous (small box on side wall)</option>
+              <option value="electric-storage">Electric storage (large tank)</option>
+              <option value="heat-pump">Heat-pump (already)</option>
+              <option value="solar">Solar (roof panels + tank)</option>
+            </select>
+
+            <label for="timeframe">How soon do you need it?</label>
+            <select id="timeframe" name="timeframe">
+              <option value="emergency">Emergency &mdash; no hot water today</option>
+              <option value="this-week">Within a week</option>
+              <option value="this-month">Within the month</option>
+              <option value="3-months">Next 1&ndash;3 months</option>
+              <option value="research">Research stage &mdash; comparing options</option>
+            </select>
+
+            <label for="message">Any details? (optional)</label>
+            <textarea id="message" name="message" rows="4" placeholder="Brand / model of existing unit, age, install location, where the gas meter and switchboard sit, anything unusual."></textarea>
+
+            <button class="btn btn-primary btn-block" type="submit">Send my quote request</button>
+
+            <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--c-muted);">We reply within 1 business day. Free, no obligation.</p>
+          </form>
+        </div>
+
+        <aside class="form-aside">
+          <h3>Prefer to talk?</h3>
+
+          <div class="info-row">
+            <span aria-hidden="true" style="font-size:1.5rem; line-height:1;">&#9742;</span>
+            <div>
+              <strong>Phone</strong>
+              <a href="tel:+61390030108">(03) 9003 0108</a>
+              <p style="font-size:0.85rem; color:var(--c-muted); margin:0;">Mon&ndash;Sat 7am&ndash;6pm &middot; emergency callouts after-hours</p>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <span aria-hidden="true" style="font-size:1.5rem; line-height:1;">&#9978;</span>
+            <div>
+              <strong>Service area</strong>
+              <p style="margin:0;">Full South East Melbourne &mdash; Berwick, Cranbourne, Narre Warren, Hampton Park, Endeavour Hills, Officer, Beaconsfield, Pakenham, Clyde, Lynbrook, Doveton. Casey + Cardinia councils.</p>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <span aria-hidden="true" style="font-size:1.5rem; line-height:1;">&#10004;</span>
+            <div>
+              <strong>What you&rsquo;ll get</strong>
+              <ul style="margin:0.4rem 0 0; padding-left:1rem; font-size:0.95rem; color:var(--c-text);">
+                <li>Honest repair-vs-replace assessment</li>
+                <li>Right-sized recommendation for your family</li>
+                <li>Side-by-side gas vs heat-pump vs solar costs</li>
+                <li>$1,000 Solar Vic rebate lodged on your behalf</li>
+                <li>VBA-registered plumber + gasfitter on every job</li>
+                <li>Fixed-price written quote, 12-month workmanship warranty</li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,262 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const faqSchema = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can you do same-day replacement?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — on most common Rheem / Rinnai / Vulcan / Dux / Bosch units we stock the swap-out on the truck. Same-day install is standard if you call before midday on a weekday."}}, {"@type": "Question", "name": "Should I repair or replace?", "acceptedAnswer": {"@type": "Answer", "text": "Rule of thumb: if the repair is over 40% of replacement cost AND the unit is past 10 years, replace. If it's the tank itself that's leaking, replace — no economical repair."}}, {"@type": "Question", "name": "How long does install take?", "acceptedAnswer": {"@type": "Answer", "text": "Standard like-for-like swap is 2–3 hours. Fuel-change (electric → gas, gas → heat-pump) is 4–6 hours plus any electrical work."}}, {"@type": "Question", "name": "Do you handle the rebate paperwork?", "acceptedAnswer": {"@type": "Answer", "text": "Yes for VEU (VIC) and STCs (federal). We bake the rebate-net price into the quote so you see what you actually pay, not a 'claim it later' number."}}, {"@type": "Question", "name": "What's the warranty?", "acceptedAnswer": {"@type": "Answer", "text": "Unit warranty: 5–10 years on the cylinder (manufacturer); 1 year on labour. Heat-pumps: 5-year compressor + 6-year cylinder."}}, {"@type": "Question", "name": "Can you install a tank we've bought ourselves?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, but warranty on the unit becomes yours to manage. Our labour warranty still applies."}}]};
+const serviceSchema = {"@context": "https://schema.org", "@type": "Service", "serviceType": "Hot water services", "provider": {"@type": "Plumber", "name": "SE Hot Water", "telephone": "+61390030108", "url": "https://sehotwater.com.au", "areaServed": {"@type": "City", "name": "South East Melbourne"}}, "areaServed": "South East Melbourne", "url": "https://sehotwater.com.au/pricing/", "offers": {"@type": "AggregateOffer", "priceCurrency": "AUD", "lowPrice": "80", "highPrice": "180000", "offerCount": "12"}};
+const breadcrumbSchema = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://sehotwater.com.au/"}, {"@type": "ListItem", "position": 2, "name": "Pricing", "item": "https://sehotwater.com.au/pricing/"}]};
+---
+<Layout
+  title="Hot water prices in South East Melbourne 2026 | (03) 9003 0108"
+  description="Hot water repair and replacement pricing in South East Melbourne — same-day swap, all brands, rebates handled. Real 2026 ranges. Call (03) 9003 0108 for an exact quote."
+  canonical="https://sehotwater.com.au/pricing/">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  </Fragment>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="hero-eyebrow">Same-day swap on most common units</span>
+      <h1>Hot water repair and replacement pricing in South East Melbourne — 2026 guide</h1>
+      <p class="hero-sub">Hot water is the one plumbing service nobody appreciates until it stops working. In South East Melbourne most failures happen on units between 8 and 15 years old — the element gives up, the anode rod has dissolved, or the tank itself has rusted through and is leaking. This guide covers what each fix typically costs and when a repair is throwing good money after bad.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="tel:+61390030108" aria-label="Call (03) 9003 0108">&#9742; Call (03) 9003 0108</a>
+        <a class="btn btn-ghost" href="/quote/">Get a written quote</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <p class="lead">Replacement is almost always cheaper-per-year-of-service than a third repair on a 12-year-old unit. We'll tell you straight which path makes sense for yours. Call (03) 9003 0108 for an exact quote.</p>
+    </div>
+  </section>
+
+  <section class="section section-tint">
+    <div class="section-inner">
+      <h2>Typical 2026 prices for hot water services in South East Melbourne</h2>
+      <p>Real ranges from our books, not made-up averages. Every quote we issue is itemised against the work below.</p>
+        <table class="pricing-table">
+          <thead><tr><th>Service</th><th>Typical range (AU 2026)</th><th>What's included</th></tr></thead>
+          <tbody>
+            <tr>
+              <td data-label="Service"><strong>Diagnostic call-out</strong></td>
+              <td data-label="Price"><span class="price-range">$90 – $150</span></td>
+              <td data-label="Note">Includes pressure test, element resistance check, anode inspection, thermostat reading.</td>
+            </tr>
+            <tr>
+              <td data-label="Service"><strong>Element replacement (electric)</strong></td>
+              <td data-label="Price"><span class="price-range">$220 – $420</span></td>
+              <td data-label="Note">Includes element, gasket, drain, refill, test. Most domestic units.</td>
+            </tr>
+            <tr>
+              <td data-label="Service"><strong>Thermostat replacement</strong></td>
+              <td data-label="Price"><span class="price-range">$180 – $320</span></td>
+              <td data-label="Note">Both ECO and operating thermostat where applicable.</td>
+            </tr>
+            <tr>
+              <td data-label="Service"><strong>Anode rod replacement</strong></td>
+              <td data-label="Price"><span class="price-range">$220 – $380</span></td>
+              <td data-label="Note">Doubles tank life if done at 5–7 years. Includes drain and refill.</td>
+            </tr>
+            <tr>
+              <td data-label="Service"><strong>Tempering valve replacement</strong></td>
+              <td data-label="Price"><span class="price-range">$220 – $380</span></td>
+              <td data-label="Note">Required for AS 3498 compliance on most units installed since 1998.</td>
+            </tr>
+            <tr>
+              <td data-label="Service"><strong>PTR (relief) valve replacement</strong></td>
+              <td data-label="Price"><span class="price-range">$180 – $280</span></td>
+              <td data-label="Note">Annual lift recommended; replace every 5 years.</td>
+            </tr>
+            <tr>
+              <td data-label="Service"><strong>Storage HWS replacement — electric</strong></td>
+              <td data-label="Price"><span class="price-range">$1,500 – $2,400</span></td>
+              <td data-label="Note">Standard 250–315L Rheem / Dux / Vulcan. Includes unit, install, removal.</td>
+            </tr>
+            <tr>
+              <td data-label="Service"><strong>Storage HWS replacement — gas</strong></td>
+              <td data-label="Price"><span class="price-range">$1,800 – $2,800</span></td>
+              <td data-label="Note">Standard 135–170L 5-star unit. Includes gas connection certificate.</td>
+            </tr>
+            <tr>
+              <td data-label="Service"><strong>Instantaneous gas HWS replacement</strong></td>
+              <td data-label="Price"><span class="price-range">$1,900 – $3,200</span></td>
+              <td data-label="Note">Continuous-flow Rinnai / Bosch / Rheem 26L/min.</td>
+            </tr>
+            <tr>
+              <td data-label="Service"><strong>Heat-pump HWS install (rebate-net)</strong></td>
+              <td data-label="Price"><span class="price-range">$2,400 – $4,200</span></td>
+              <td data-label="Note">Net of state rebate (where eligible). Typically Sanden / iStore / Reclaim.</td>
+            </tr>
+            <tr>
+              <td data-label="Service"><strong>Solar HWS replacement (roof + tank)</strong></td>
+              <td data-label="Price"><span class="price-range">$3,800 – $6,500</span></td>
+              <td data-label="Note">Evac-tube or flat-panel with electric or gas boost.</td>
+            </tr>
+            <tr>
+              <td data-label="Service"><strong>Relocate HWS to different position</strong></td>
+              <td data-label="Price"><span class="price-range">+$450 – $1,200</span></td>
+              <td data-label="Note">On top of replacement cost. Includes pipework re-route + electrical/gas re-stub.</td>
+            </tr>
+          </tbody>
+        </table>
+      <p class="table-foot"><em>Prices indicative for South East Melbourne in 2026. Final quote depends on your site — call (03) 9003 0108 for an exact number.</em></p>
+    </div>
+  </section>
+
+  <section class="cta-card-section">
+    <div class="cta-card">
+      <div class="cta-card-body">
+        <h3>Need an exact price for your job?</h3>
+        <p>Most quotes ready within 24 hours of the site visit. No-obligation, free, written.</p>
+      </div>
+      <div class="cta-card-actions">
+        <a class="btn btn-primary" href="tel:+61390030108">&#9742; Call (03) 9003 0108</a>
+        <a class="btn btn-ghost" href="/quote/">Online quote form</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <h2>What changes the price on your job</h2>
+      <p>The ranges above are the starting point. These five factors are what move a quote up or down within (or sometimes outside) those bands.</p>
+        <ol class="numbered-list">
+          <li>Fuel type — gas units are slightly more expensive to fit (compliance certificate + flue clearances) but cheapest to run; heat-pump highest capex but lowest running cost.</li>
+          <li>Capacity — bigger tanks aren't always better; we size to family + usage pattern, not just bedrooms.</li>
+          <li>Position — under-eaves, on a stand, in a roof cavity, or behind shrubbery all add labour.</li>
+          <li>Rebate eligibility — VIC VEU, NSW Energy Saver, and federal STCs can reduce a heat-pump install by $1,000–$2,500. We process the paperwork.</li>
+          <li>Disposal — old tank disposal is included in our prices; some installers charge $80–$150 extra. Read the fine print.</li>
+        </ol>
+    </div>
+  </section>
+
+  <section class="section section-warn">
+    <div class="section-inner">
+      <h2>Red flags &mdash; what to watch for in quotes</h2>
+      <p>We see these patterns every week from operators we'd never recommend. If a quote you've received contains one of these, ask before signing.</p>
+        <ul class="bullet-list">
+          <li>'$1,099 hot water installed' ads — usually cheap unit + cheap labour + no compliance certificate + 6-month warranty.</li>
+          <li>Quotes that don't separate unit cost from labour — makes it hard to compare apples to apples between installers.</li>
+          <li>Installers pushing a tank you don't need — a 4-person family on gas doesn't need a 400L electric.</li>
+          <li>No compliance certificate — illegal under AS/NZS 3500 and voids your home insurance.</li>
+          <li>Solar / heat-pump quotes that don't itemise the rebate path — some operators claim the rebate themselves and don't pass it on.</li>
+        </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <h2>How to get an accurate quote in 5 minutes</h2>
+      <p>Have the following ready when you call (03) 9003 0108 (or jot it on the quote form) and we can give you a real number in one call, not five.</p>
+        <ol class="numbered-list">
+          <li>Photo of the existing unit (the spec plate showing model and capacity).</li>
+          <li>Where the unit sits — under eaves, on a stand, in the roof, against an external wall.</li>
+          <li>Your fuel availability — natural gas, LPG, electric only.</li>
+          <li>Your usage — number of residents and showers per day.</li>
+          <li>Whether you want to swap fuel types (gas → heat-pump) — drives quote materially.</li>
+        </ol>
+    </div>
+  </section>
+
+  <section class="section section-tint">
+    <div class="section-inner">
+      <h2>Frequently asked questions</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary class="faq-q"><strong>Can you do same-day replacement?</strong></summary>
+          <div class="faq-a">Yes — on most common Rheem / Rinnai / Vulcan / Dux / Bosch units we stock the swap-out on the truck. Same-day install is standard if you call before midday on a weekday.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q"><strong>Should I repair or replace?</strong></summary>
+          <div class="faq-a">Rule of thumb: if the repair is over 40% of replacement cost AND the unit is past 10 years, replace. If it's the tank itself that's leaking, replace — no economical repair.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q"><strong>How long does install take?</strong></summary>
+          <div class="faq-a">Standard like-for-like swap is 2–3 hours. Fuel-change (electric → gas, gas → heat-pump) is 4–6 hours plus any electrical work.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q"><strong>Do you handle the rebate paperwork?</strong></summary>
+          <div class="faq-a">Yes for VEU (VIC) and STCs (federal). We bake the rebate-net price into the quote so you see what you actually pay, not a 'claim it later' number.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q"><strong>What's the warranty?</strong></summary>
+          <div class="faq-a">Unit warranty: 5–10 years on the cylinder (manufacturer); 1 year on labour. Heat-pumps: 5-year compressor + 6-year cylinder.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q"><strong>Can you install a tank we've bought ourselves?</strong></summary>
+          <div class="faq-a">Yes, but warranty on the unit becomes yours to manage. Our labour warranty still applies.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-card-section">
+    <div class="cta-card cta-card-primary">
+      <div class="cta-card-body">
+        <h3>Ready for an exact quote on your South East Melbourne job?</h3>
+        <p>Free written quotes. No obligation. Same-day callbacks on most enquiries.</p>
+      </div>
+      <div class="cta-card-actions">
+        <a class="btn btn-primary btn-large" href="tel:+61390030108" aria-label="Call (03) 9003 0108">&#9742; Call (03) 9003 0108</a>
+        <a class="btn btn-ghost btn-large" href="/quote/">Get a quote online</a>
+      </div>
+    </div>
+  </section>
+
+  <style>
+
+    .lead { font-size: 1.125rem; line-height: 1.7; max-width: 70rem; margin: 0 auto; color: var(--text, #1f2937); }
+    .section-tint { background: rgba(0, 0, 0, 0.025); }
+    .section-warn { background: rgba(180, 100, 0, 0.04); }
+    .pricing-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.95rem;
+      background: #fff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .pricing-table thead { background: #1f2937; color: #fff; }
+    .pricing-table th { padding: 0.85rem 1rem; text-align: left; font-weight: 600; font-size: 0.95rem; }
+    .pricing-table td { padding: 0.85rem 1rem; border-top: 1px solid #e5e7eb; vertical-align: top; }
+    .pricing-table tr:nth-child(even) td { background: rgba(0,0,0,0.015); }
+    .pricing-table .price-range { font-weight: 600; color: #047857; white-space: nowrap; }
+    .table-foot { font-size: 0.9rem; color: #6b7280; margin-top: 0.5rem; }
+    @media (max-width: 640px) {
+      .pricing-table thead { display: none; }
+      .pricing-table, .pricing-table tbody, .pricing-table tr, .pricing-table td { display: block; width: 100%; }
+      .pricing-table tr { border-bottom: 2px solid #e5e7eb; padding: 0.75rem 0; }
+      .pricing-table td { border: none; padding: 0.35rem 0.5rem; }
+      .pricing-table td:before { content: attr(data-label) ": "; font-weight: 600; color: #6b7280; display: inline-block; min-width: 5rem; }
+      .pricing-table td:first-child:before { display: none; }
+    }
+    .numbered-list, .bullet-list { max-width: 65rem; margin: 1rem 0; padding-left: 1.5rem; line-height: 1.7; }
+    .numbered-list li, .bullet-list li { margin: 0.65rem 0; }
+    .cta-card-section { padding: 2rem 1rem; }
+    .cta-card {
+      max-width: 56rem; margin: 0 auto;
+      background: #fff; border: 1px solid #e5e7eb; border-radius: 10px;
+      padding: 1.75rem; display: flex; gap: 1.25rem; align-items: center; flex-wrap: wrap;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .cta-card-primary { background: #1f2937; color: #fff; border-color: #1f2937; }
+    .cta-card-primary h3 { color: #fff; }
+    .cta-card-body { flex: 1 1 24rem; }
+    .cta-card-body h3 { margin: 0 0 0.4rem 0; font-size: 1.35rem; line-height: 1.3; }
+    .cta-card-body p { margin: 0; }
+    .cta-card-actions { display: flex; gap: 0.65rem; flex-wrap: wrap; }
+    .btn-large { padding: 0.85rem 1.5rem; font-size: 1.05rem; }
+    .faq-list { max-width: 60rem; margin: 1rem auto; }
+    .faq-item { border-bottom: 1px solid #e5e7eb; padding: 0.85rem 0; }
+    .faq-item[open] { background: rgba(0,0,0,0.02); }
+    .faq-q { cursor: pointer; padding: 0.4rem 0.5rem; font-size: 1.05rem; }
+    .faq-q:hover { color: #047857; }
+    .faq-a { padding: 0.65rem 0.5rem 0.85rem 0.5rem; line-height: 1.7; color: #4b5563; }
+
+  </style>
+</Layout>

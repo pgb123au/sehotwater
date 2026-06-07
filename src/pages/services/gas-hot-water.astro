@@ -1,0 +1,155 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Instantaneous (continuous) or storage gas — what's right for my Berwick home?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Instantaneous (continuous flow) heats only the water you draw, so you never run out — best for households running 2–3+ simultaneous showers or where the existing storage tank keeps emptying. Storage gas keeps a tank hot 24/7, recovers slowly between draws, but the upfront cost is lower and the gas supply doesn't need to be upgraded. Most 3–4 person Berwick homes are well-served by a 26L/min Rinnai Infinity or Bosch Highflow instantaneous. Storage suits a 1–2 person home or where gas line size or pressure won't support instantaneous." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I size a gas instantaneous unit?",
+      "acceptedAnswer": { "@type": "Answer", "text": "By peak simultaneous outlet demand, measured in litres per minute (L/min). One shower at full flow draws around 8–10 L/min; a dishwasher 6 L/min; kitchen tap 5 L/min. So: 16 L/min suits 1–2 outlets at once, 20 L/min suits 2–3 outlets, 26 L/min comfortably handles 3+ outlets including a household running showers and dishwasher together. Bigger doesn't cost much more and prevents the lukewarm-shower problem when someone else turns a tap on." }
+    },
+    {
+      "@type": "Question",
+      "name": "Which gas hot water brands do you install?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Rinnai Infinity (instantaneous, 16/20/26/32 L/min) — the most-installed unit in Australia, parts everywhere, reliable. Bosch Highflow (instantaneous) — German engineering, great in hard-water areas, slightly quieter combustion. Rheem Stellar / Metro (storage, 135–360L) — Australian-made storage tanks, robust, easy to service. Rinnai HotFlo (storage). We install the units we trust to repair in 10 years — these are them." }
+    },
+    {
+      "@type": "Question",
+      "name": "What's installed for gas hot water in Berwick — natural gas or LPG?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Almost all reticulated suburbs (Berwick, Cranbourne, Narre Warren, Hampton Park, Endeavour Hills, Officer, Pakenham) are on natural gas. Acreage and semi-rural blocks toward Beaconsfield Upper, Harkaway and the Bunyip end of Cardinia run on LPG cylinders. Every model we install has a natural-gas SKU and an LPG SKU — they're not interchangeable, the injectors and burner are different. Confirming your gas type is the first thing we check on site." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you handle the gas line, flue and electrical work?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes — all in-house. Licensed gasfitter for the gas line and flue (AS 5601), licensed plumber for the water connections (AS 3500.4), licensed electrician for the 240V supply and isolation. Most like-for-like replacements use the existing gas line and flue. Changing from storage to instantaneous usually needs a new flue penetration and sometimes a gas line upsize. We check, we quote it accurately, no surprises." }
+    },
+    {
+      "@type": "Question",
+      "name": "How long do gas units last in South East Melbourne?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Gas storage tanks: 10–12 years typically. The cylinder rusts from the inside out — the anode rod that's meant to prevent it depletes after 5–7 years and most homeowners never replace it. Once the tank itself leaks, replacement is the only option. Gas instantaneous units: 15–20 years, sometimes 25, because there's no storage cylinder to fail. Heat exchanger and electronic board are the most common failure points, both replaceable." }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I replace gas with heat-pump in 2026?",
+      "acceptedAnswer": { "@type": "Answer", "text": "For most South East Melbourne owner-occupiers, yes — the maths now favours heat-pump. A 280L heat-pump runs about 70% cheaper than gas at current Victorian energy prices, qualifies for the $1,000 Solar Victoria rebate plus STCs (net cost ~$3K–$4.5K), and aligns with Victoria's gas-out direction. Gas instantaneous still wins where you have a strong existing gas line and don't want a noisy outdoor compressor — we'll be honest about which suits your home." }
+    }
+  ]
+};
+---
+<Layout
+  title="Gas Hot Water Berwick | Rinnai Infinity, Bosch, Rheem | (03) 9003 0108"
+  description="Gas hot water installation and replacement across Berwick, Cranbourne, Narre Warren, Hampton Park, Endeavour Hills. Rinnai Infinity instantaneous, Bosch Highflow, Rheem storage. $1.8K–$3K installed. VBA-licensed gasfitters."
+  canonical="https://sehotwater.com.au/services/gas-hot-water/">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  </Fragment>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="hero-eyebrow">Instantaneous &middot; Storage &middot; Natural gas &middot; LPG</span>
+      <h1>Gas hot water in <span class="accent">Berwick &amp; the South East</span>.</h1>
+      <p class="hero-sub">
+        Rinnai Infinity, Bosch Highflow, Rheem Stellar. Continuous-flow instantaneous
+        or storage, natural gas or LPG. Like-for-like replacements in 2&ndash;3 hours;
+        storage-to-instantaneous changeovers in half a day. VBA-licensed gasfitter
+        and plumber on every job.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="tel:+61390030108">&#9742; Call (03) 9003 0108</a>
+        <a class="btn btn-ghost" href="/quote/">Book a free quote</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <h2>Brand &amp; model comparison.</h2>
+      <div class="divider"></div>
+      <div style="max-width: 65rem;">
+        <h3>Instantaneous (continuous flow).</h3>
+        <ul>
+          <li><strong>Rinnai Infinity 16 / 20 / 26 / 32:</strong> Australia&rsquo;s most-installed unit. Bulletproof, parts everywhere, 12-year cylinder warranty. ~$2.2K&ndash;$3K installed depending on flow rate.</li>
+          <li><strong>Bosch Highflow 17e / 21e / 26e:</strong> German engineering, slightly quieter, excellent in hard-water suburbs. ~$2.3K&ndash;$3K installed.</li>
+          <li><strong>Rheem Metro / 5-star instantaneous:</strong> Australian-made, similar reliability to Rinnai. ~$2.1K&ndash;$2.9K.</li>
+        </ul>
+
+        <h3 style="margin-top: 2rem;">Storage gas.</h3>
+        <ul>
+          <li><strong>Rheem Stellar 360 / 270 / 135:</strong> 5-star storage, sacrificial anode, internal or external mount. ~$1.9K&ndash;$2.4K installed.</li>
+          <li><strong>Rinnai HotFlo 170 / 250:</strong> Robust, simple, easy to service. ~$1.8K&ndash;$2.3K installed.</li>
+          <li><strong>Bosch internal storage:</strong> Where natural-vent flue is required indoors. ~$2K&ndash;$2.5K.</li>
+        </ul>
+
+        <h3 style="margin-top: 2rem;">Sizing by household.</h3>
+        <p>
+          <strong>1&ndash;2 people:</strong> 135&ndash;170L storage or 16L/min instantaneous.<br>
+          <strong>3 people:</strong> 170&ndash;250L storage or 20L/min instantaneous.<br>
+          <strong>4 people:</strong> 250&ndash;315L storage or 20&ndash;26L/min instantaneous.<br>
+          <strong>5+ people:</strong> 315&ndash;360L storage or 26&ndash;32L/min instantaneous.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="section-inner">
+      <h2>What we do on site &mdash; honest.</h2>
+      <div class="divider"></div>
+      <div style="max-width: 65rem;">
+        <p>
+          Standard like-for-like gas storage replacement: we drain and remove the
+          old unit, set the new tank, reconnect water, gas and electrical (240V
+          for ignition), test for gas leaks (manometer + soapy water on every
+          joint), pressure-test water connections, commission the unit, walk you
+          through the controls. 2&ndash;3 hours.
+        </p>
+        <p>
+          Storage-to-instantaneous changeover: we relocate the unit (instantaneous
+          mounts on an external wall for clearance), run a new gas line if the
+          existing one is undersized for the new flow rate (a 26L/min Rinnai
+          Infinity needs at least 20mm copper), penetrate the wall for the new
+          flue, install the controller inside, then connect and commission. Half
+          a day.
+        </p>
+        <p>
+          We pull a VBA gas compliance certificate on every gas install (legally
+          required) and lodge it with the VBA &mdash; you keep a copy. No
+          unlicensed handyman jobs.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <h2>Standards we work to.</h2>
+      <div class="divider"></div>
+      <ul style="max-width: 60rem;">
+        <li><strong>AS 5601</strong> &mdash; Gas installations. The Australian Standard for gas pipework, sizing, flueing, ventilation.</li>
+        <li><strong>AS 3500.4</strong> &mdash; Plumbing and drainage: heated water services. Tempering valve requirements, expansion control, pipework.</li>
+        <li><strong>AS/NZS 4234</strong> &mdash; Heated water systems thermal performance. Used for energy rating.</li>
+        <li><strong>VBA registration</strong> &mdash; Gasfitter (Type A appliances) and plumber. Every job certified.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="cta-block">
+        <h2>Gas hot water quote &mdash; usually within 24 hours.</h2>
+        <p>Honest sizing, honest brands, honest pricing. We&rsquo;ll tell you if heat-pump suits you better.</p>
+        <div class="hero-actions" style="justify-content:center;">
+          <a class="btn btn-primary" href="tel:+61390030108">&#9742; Call (03) 9003 0108</a>
+          <a class="btn btn-ghost" href="/quote/">Book online</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

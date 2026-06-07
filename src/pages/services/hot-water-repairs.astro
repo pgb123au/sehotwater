@@ -1,0 +1,159 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can you come out same-day for a no-hot-water callout?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes — most South East Melbourne emergency callouts (Berwick, Cranbourne, Narre Warren, Hampton Park, Endeavour Hills, Officer, Beaconsfield, Pakenham) we're on site within 2–4 hours of the call. Call (03) 9003 0108. Half the time we diagnose on the phone (pilot light blown out, off-peak breaker tripped, isolation valve closed) and save you the callout fee." }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a hot water repair cost?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Indicative call-out plus repair: thermostat replacement $200–$350, electric element replacement $250–$400, anode rod replacement $250–$400, pilot light assembly / thermocouple $200–$350, tempering valve $250–$400, expansion control valve $200–$350, pressure relief valve $200–$350, heat-pump compressor circuit board $400–$800. Most repairs we complete in the same visit with stock from the van. If the cylinder itself is leaking, repair isn't an option — we'll quote replacement and book the install." }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the most common hot water problems we see in South East Melbourne?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Top 8 in order: (1) gas pilot light blown out — windy night, gas meter stalled, or thermocouple at end of life; (2) electric off-peak breaker tripped at the switchboard; (3) thermostat failed open (no hot water) or closed (scalding hot); (4) element burnt out (electric and electric-boosted solar); (5) leaking pressure/temperature relief valve (often just a dirty valve, sometimes signals tank pressure issues); (6) tank itself leaking (game over — replace); (7) tempering valve seized (delivers either cold or scalding, not warm); (8) heat-pump compressor circuit board fault or refrigerant leak. We carry stock for items 1–7 on the van." }
+    },
+    {
+      "@type": "Question",
+      "name": "Water around the base of my hot water unit — what does it mean?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Three possibilities, in order from cheapest to most expensive to fix: (1) the pressure/temperature relief valve is dripping into the tundish — this is normal expansion and only signals a fault if it's continuous; usually a $200 valve swap fixes it. (2) A water connection at the top of the tank is leaking — often just a loose fitting, $150–$300. (3) The cylinder itself has rusted through and is leaking — the unit is finished, replacement is the only option. Tell-tale: (1) drips visibly through the relief drain, (2) leaks from above the tank, (3) puddle steady underneath even after wiping dry. Send us a photo of where the water is coming from before the callout and we usually know which it is." }
+    },
+    {
+      "@type": "Question",
+      "name": "My hot water is lukewarm — what's wrong?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Three common causes: (1) tempering valve failure — delivers tepid water no matter what; replace the valve $250–$400. (2) thermostat set too low or partially failed — adjust or replace $200–$350. (3) sediment build-up in the bottom of the tank reducing efficient heating — flush the tank ($150–$250) or, on older tanks, time to replace. (4) on gas instantaneous: the unit is undersized for your simultaneous demand (washing while showering = lukewarm) — sizing issue, not a fault, sometimes solved by reducing tap flow or installing a larger unit. We diagnose which on the call." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you repair all brands?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes — Rinnai, Bosch, Rheem, Dux, Aquamax, Vulcan, Aquaheat, Apricus, Edwards, Solahart, Sanden, Reclaim, Stiebel Eltron, iStore, Quantum, Saxon, Hocking, and most others. Parts availability is excellent for the major Australian brands (Rinnai, Bosch, Rheem). Heat-pump parts (compressors, control boards) can take 1–3 days to source on less-common brands — we'll lock in the call and return when parts land." }
+    },
+    {
+      "@type": "Question",
+      "name": "When does repair stop making sense and replacement start?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Honest rules of thumb. Repair: unit is under 10 years old AND the cylinder is sound (no leak) AND the parts to repair cost under 25% of replacement. Replace: unit is over 12 years old, OR the cylinder is leaking, OR repair cost is over 50% of replacement, OR you've already replaced 2+ components in the last 2 years. The grey zone (10–12 years, mid-cost repair) is your call — we lay out the options honestly and don't push replacement when repair is the smart play." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you do emergency after-hours repairs?",
+      "acceptedAnswer": { "@type": "Answer", "text": "For genuine emergencies (water leaking into your home, gas leak suspected, no hot water on a weekend with children in the house) — yes, after-hours callout available. After-hours callout fee is $250 instead of standard $150. For 'inconvenient but not urgent' (no hot water but can wait until tomorrow morning), we book first-thing next-day at standard rate. Call (03) 9003 0108 and we'll triage on the call." }
+    }
+  ]
+};
+---
+<Layout
+  title="Hot Water Repairs Berwick | Same-Day | (03) 9003 0108"
+  description="Same-day hot water repairs across Berwick, Cranbourne, Narre Warren, Hampton Park, Endeavour Hills. Leaking tanks, no hot water, pilot light, thermostats, elements, valves. Stock on the van. $200–$800 most jobs. VBA-licensed plumbers and gasfitters."
+  canonical="https://sehotwater.com.au/services/hot-water-repairs/">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  </Fragment>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="hero-eyebrow">Same-day callouts &middot; Stock on the van &middot; VBA-licensed</span>
+      <h1>No hot water in <span class="accent">Berwick today?</span></h1>
+      <p class="hero-sub">
+        Same-day repairs across South East Melbourne &mdash; usually on site
+        within 2&ndash;4 hours of the call. Leaking tanks, dead pilot lights,
+        burnt-out elements, failed thermostats, seized valves, tripped breakers.
+        We diagnose half the calls on the phone and most fixes cost $200&ndash;$800.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="tel:+61390030108">&#9742; Call (03) 9003 0108</a>
+        <a class="btn btn-ghost" href="/quote/">Book online</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <h2>The top 8 hot water problems we see &mdash; with indicative cost.</h2>
+      <div class="divider"></div>
+      <div style="max-width: 65rem;">
+        <ul>
+          <li><strong>Pilot light blown out (gas):</strong> Re-light + check thermocouple. $150&ndash;$350.</li>
+          <li><strong>Off-peak breaker tripped (electric):</strong> Reset, check element resistance, replace element if shorted. $200&ndash;$400.</li>
+          <li><strong>Thermostat failed:</strong> Replace thermostat. $200&ndash;$350.</li>
+          <li><strong>Burnt-out element (electric / electric-boost solar):</strong> Replace element. $250&ndash;$400.</li>
+          <li><strong>Leaking PTR valve (relief):</strong> Replace valve. $200&ndash;$350.</li>
+          <li><strong>Cylinder leak:</strong> Replacement only &mdash; tank done. Quote new unit.</li>
+          <li><strong>Tempering valve seized:</strong> Replace valve. $250&ndash;$400.</li>
+          <li><strong>Heat-pump compressor / circuit board:</strong> Diagnose, source part, return. $400&ndash;$800 typical.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="section-inner">
+      <h2>What &ldquo;same-day&rdquo; actually means.</h2>
+      <div class="divider"></div>
+      <div style="max-width: 65rem;">
+        <p>
+          You call. We triage on the phone &mdash; if it&rsquo;s a pilot light
+          you can re-light yourself or an off-peak breaker reset, we save you
+          the callout. If it&rsquo;s a real fault, we book the visit.
+        </p>
+        <p>
+          For Berwick, Cranbourne, Narre Warren, Hampton Park and Endeavour Hills
+          calls received before midday, we&rsquo;re typically on site within
+          2&ndash;4 hours. Afternoon calls are usually next-morning.
+        </p>
+        <p>
+          We carry stock for the top 7 of those 8 fault types on the van. Most
+          repairs are completed in the same visit. Heat-pump compressor and
+          control-board parts on less-common brands can take 1&ndash;3 days
+          to source &mdash; we lock the diagnosis and return when parts land.
+        </p>
+        <p>
+          For genuine emergencies (water leaking into the house, gas smell,
+          no hot water on a weekend with kids), after-hours callouts available
+          at a $250 callout fee.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <h2>Repair vs replace &mdash; honest rules.</h2>
+      <div class="divider"></div>
+      <div style="max-width: 65rem;">
+        <p><strong>Repair</strong> when: unit is under 10 years old, AND the cylinder is sound, AND repair cost is under 25% of replacement.</p>
+        <p><strong>Replace</strong> when: unit is over 12 years old, OR the cylinder is leaking, OR repair cost is over 50% of replacement, OR you&rsquo;ve already replaced 2+ components in the last 2 years.</p>
+        <p>
+          The grey zone (10&ndash;12 years, mid-cost repair) is your call. We
+          give you the options on site &mdash; we don&rsquo;t push replacement
+          when repair is the smart play.
+        </p>
+        <p>
+          If replacement is the call, see <a href="/services/gas-hot-water/">gas</a>,
+          <a href="/services/heat-pump-hot-water/">heat-pump</a>,
+          <a href="/services/solar-hot-water/">solar</a> or
+          <a href="/services/electric-hot-water/">electric</a> options.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="cta-block">
+        <h2>No hot water? Call now.</h2>
+        <p>Same-day across the South East. Most callouts diagnosed in 30 minutes.</p>
+        <div class="hero-actions" style="justify-content:center;">
+          <a class="btn btn-primary" href="tel:+61390030108">&#9742; Call (03) 9003 0108</a>
+          <a class="btn btn-ghost" href="/quote/">Book online</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

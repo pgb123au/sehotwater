@@ -1,0 +1,296 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "No hot water in Berwick this morning — what should I do first?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Check three things before calling: (1) for a gas storage unit, is the pilot light still lit (look through the inspection panel at the base) — a windy night or a stalled gas meter can blow it out; (2) for an electric or heat-pump unit, has the off-peak breaker tripped at the switchboard; (3) is the cold water still flowing to the unit (isolation valve not closed). If those check out and it's still cold, call (03) 9003 0108 — we cover Berwick, Cranbourne, Narre Warren, Hampton Park and Endeavour Hills same-day for most no-hot-water callouts, usually within 2–4 hours." }
+    },
+    {
+      "@type": "Question",
+      "name": "Gas, heat pump or solar — which hot water system is right for my Berwick home in 2026?",
+      "acceptedAnswer": { "@type": "Answer", "text": "For most South East Melbourne homes in 2026 the maths now favours a heat-pump. A 280L heat-pump costs $4,000–$5,500 installed but qualifies for a $1,000 Solar Victoria rebate plus STCs (small-scale technology certificates) — net cost lands around $3,000–$4,500. Running cost is roughly 30% of an electric storage unit and about 70% cheaper to run than gas at current Victorian energy prices. Gas instantaneous (Rinnai Infinity, Bosch Highflow) still suits houses with strong existing gas plumbing and three-plus simultaneous outlets. Solar thermal panels are excellent for homes already getting roof sun and not wanting heat-pump noise, but the install is now usually more expensive than heat-pump after rebates. We walk through all four on site." }
+    },
+    {
+      "@type": "Question",
+      "name": "Am I eligible for the Solar Victoria heat-pump rebate?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Eligibility (as of 2026): you must be the owner-occupier of a Victorian home valued under $3 million, household income under $210,000, and the property must have a working hot water system being replaced (no new-build). The rebate is $1,000 off an approved heat-pump model, claimed by an Solar Vic-approved installer on your behalf — you don't lodge anything yourself. We're on the approved installer list. Rebates have closed and reopened in batches the last two years; the program is also being progressively wound back as Victoria moves away from gas, so if you're considering it the window is shrinking." }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a hot water replacement cost in South East Melbourne?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Indicative installed prices: gas instantaneous 26L (Rinnai Infinity, Bosch Highflow) $2,200–$3,000; gas storage 170L (Rheem, Rinnai, Bosch) $1,800–$2,500; heat-pump 280L (Sanden, Reclaim, Stiebel Eltron) $4,000–$5,500 before rebate, $3,000–$4,500 net after $1,000 Solar Vic + STCs; solar hot water 300L roof-mount with gas boost $5,000–$7,000 net of STCs; electric storage 250–315L $1,500–$2,200. Same-day repairs run $200–$800 depending on the part — thermostats, anodes, valves, elements, pilot assemblies and flue kits are all stock items on the van." }
+    },
+    {
+      "@type": "Question",
+      "name": "My existing unit is 12 years old — is it worth repairing or should I replace?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Honest rule of thumb: gas storage 10–12 years, electric storage 10–15, heat-pump 10–15, solar tank 15–20. Once a storage tank is leaking from the cylinder itself (not just a relief valve), it's done — replace it. Repairing a 12-year-old unit's thermostat or element makes sense if the cylinder is sound, but you're typically only buying another 1–3 years. Most of the 1990s–2000s gas units across Berwick, Narre Warren, Hampton Park and Endeavour Hills are now hitting that failure curve — we replace 4–6 of them a week. We give you the honest call on site." }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a hot water replacement take?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Like-for-like gas storage swap: 2–3 hours. Like-for-like electric storage swap: 2–3 hours. Gas storage to gas instantaneous changeover (relocates unit, new gas line, new flue): half a day. Electric or gas to heat-pump conversion (new circuit, possible relocation outdoors, condensate drain): 4–6 hours. Solar hot water full install (roof panels, tank, controls, boost): full day, sometimes two. Most jobs we book within 1–3 days; emergency no-hot-water repairs we aim for same-day." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you size hot water units by family size?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes — undersizing is the #1 reason people complain about a new system. Rough sizing for storage units: 1–2 people 125–170L, 3 people 170–250L, 4 people 250–315L, 5+ people 315–400L. For continuous (instantaneous) gas the sizing is in litres per minute: 16L/min for 1–2 outlets, 20L/min for 2–3 outlets, 26L/min for 3+ outlets or a household running showers and dishwasher simultaneously. For heat-pumps the smaller 200L tanks recover slowly — most 3–4 person Berwick families want the 280–300L tank. We'll measure your actual peak demand before quoting." }
+    },
+    {
+      "@type": "Question",
+      "name": "What does Victoria's gas-out policy mean for my next hot water system?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Victoria's Gas Substitution Roadmap (updated 2024) blocks gas connections in new homes from 2024 and progressively phases gas out of existing homes over the next 15+ years. For your replacement decision today: existing gas connections aren't going anywhere immediately, but the long-term direction is electrification. Heat-pump and solar (electric boost) are future-proof; like-for-like gas replacement still works but is a 10–12 year decision that may be your last gas appliance. The Solar Victoria heat-pump rebate exists specifically to nudge replacements off gas — which is why the rebate window is closing." }
+    }
+  ]
+};
+---
+<Layout
+  title="SE Hot Water | Gas, Heat-Pump, Solar Hot Water Berwick | (03) 9003 0108"
+  description="Hot water specialists across South East Melbourne — Berwick, Cranbourne, Narre Warren, Hampton Park, Endeavour Hills. Gas, heat-pump, solar, electric. Same-day repairs. Solar Victoria-approved installers. VBA-registered plumbers.">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  </Fragment>
+
+<style>
+  /* Image-banner integration (added 2026-06-04) */
+  .hero {
+    position: relative;
+    background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.55), rgba(15, 23, 42, 0.28)), url('/images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+  }
+  .hero h1,
+  .hero .hero-sub,
+  .hero .hero-eyebrow,
+  .hero .hero-trust,
+  .hero .accent {
+    color: #fff;
+  }
+  .hero .accent {
+    color: #fcd34d;
+  }
+  .hero .hero-eyebrow {
+    color: rgba(255, 255, 255, 0.85);
+  }
+  .hero .hero-trust {
+    color: rgba(255, 255, 255, 0.78);
+  }
+
+  .image-banner {
+    width: 100%;
+    max-height: 460px;
+    overflow: hidden;
+    margin: 0;
+  }
+  .image-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 70%;
+    display: block;
+  }
+  .image-banner figcaption {
+    background: rgba(15, 23, 42, 0.92);
+    color: rgba(255, 255, 255, 0.85);
+    padding: 0.85rem 1.25rem;
+    text-align: center;
+    font-size: 0.95rem;
+    margin: 0;
+  }
+</style>
+
+
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="hero-eyebrow">Berwick &middot; Cranbourne &middot; Narre Warren &middot; Hampton Park &middot; Endeavour Hills</span>
+      <h1>No hot water? <span class="accent">We&rsquo;re here today.</span></h1>
+      <p class="hero-sub">
+        Hot water specialists across South East Melbourne. Same-day repairs on
+        gas, heat-pump, solar and electric systems &mdash; plus full replacements
+        with the Solar Victoria heat-pump rebate handled in-house. VBA-registered
+        plumbers and gasfitters. Stock on the van.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="tel:+61390030108">&#9742; Call (03) 9003 0108</a>
+        <a class="btn btn-ghost" href="/quote/">Book a free quote</a>
+      </div>
+
+      <div class="hero-trust">
+        <div><strong>Same-day</strong>Emergency callouts</div>
+        <div><strong>$1,000</strong>Solar Vic heat-pump rebate</div>
+        <div><strong>$2K&ndash;$6K</strong>Typical replacement range</div>
+        <div><strong>VBA</strong>Gas + plumbing licensed</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <span class="section-eyebrow">What we install &amp; repair</span>
+      <h2>Five hot water services.</h2>
+      <p class="section-lead">
+        From a same-day no-hot-water callout through to a full heat-pump
+        changeover with the $1,000 Solar Victoria rebate claimed on your behalf.
+        We size it right, we install it right, we stand behind it.
+      </p>
+
+      <div class="svc-grid">
+        <a class="svc-card" href="/services/gas-hot-water/">
+          <div class="svc-icon" aria-hidden="true">&#9832;</div>
+          <h3>Gas hot water</h3>
+          <p>Instantaneous (continuous) and storage gas units. Rinnai Infinity, Bosch Highflow, Rheem Stellar. 16L, 20L, 26L flow rates or 135&ndash;360L storage. ~$1.8K&ndash;$3K installed.</p>
+          <span class="svc-link">See gas hot water &rarr;</span>
+        </a>
+
+        <a class="svc-card" href="/services/heat-pump-hot-water/">
+          <div class="svc-icon" aria-hidden="true">&#9832;</div>
+          <h3>Heat-pump hot water</h3>
+          <p>Air-source heat-pumps &mdash; Sanden, Reclaim, Stiebel Eltron. 70% cheaper to run than gas. Eligible for the $1,000 Solar Vic rebate + STCs. ~$3K&ndash;$4.5K net.</p>
+          <span class="svc-link">See heat-pump &rarr;</span>
+        </a>
+
+        <a class="svc-card" href="/services/solar-hot-water/">
+          <div class="svc-icon" aria-hidden="true">&#9728;</div>
+          <h3>Solar hot water</h3>
+          <p>Roof-mount evacuated-tube or flat-plate panels with gas or electric boost. Apricus, Rheem Loline, Edwards. STCs + Solar Vic rebates. ~$5K&ndash;$7K net.</p>
+          <span class="svc-link">See solar hot water &rarr;</span>
+        </a>
+
+        <a class="svc-card" href="/services/electric-hot-water/">
+          <div class="svc-icon" aria-hidden="true">&#9889;</div>
+          <h3>Electric hot water</h3>
+          <p>Off-peak storage (Rheem, Dux, Aquamax) 125&ndash;400L. Like-for-like swap or conversion path to heat-pump. ~$1.5K&ndash;$2.2K installed. Future-proof rewire option.</p>
+          <span class="svc-link">See electric &rarr;</span>
+        </a>
+
+        <a class="svc-card" href="/services/hot-water-repairs/">
+          <div class="svc-icon" aria-hidden="true">&#128295;</div>
+          <h3>Hot water repairs</h3>
+          <p>Same-day no-hot-water callouts. Leaking tanks, pilot light issues, thermostats, anodes, elements, valves. Stock on the van. $200&ndash;$800 most jobs.</p>
+          <span class="svc-link">See repairs &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  <figure class="image-banner">
+    <img src="/images/result.jpg" alt="Brand-new heat-pump hot water system on a tidy concrete pad" loading="lazy" decoding="async" />
+    <figcaption>Heat pumps, gas continuous-flow, electric — installed properly.</figcaption>
+  </figure>
+
+
+  <section class="section section-alt">
+    <div class="section-inner">
+      <span class="section-eyebrow">Why a South East specialist</span>
+      <h2>Three things every South East Melbourne hot water decision turns on.</h2>
+      <div class="divider"></div>
+
+      <div style="display: grid; grid-template-columns: 1fr; gap: 2rem; max-width: 60rem;">
+        <div>
+          <h3>Victoria&rsquo;s gas-out policy &mdash; what to install in 2026.</h3>
+          <p>
+            Victoria&rsquo;s Gas Substitution Roadmap is progressively phasing
+            gas out of homes. New builds since 2024 can&rsquo;t connect to gas
+            for hot water; existing homes can still replace like-for-like, but
+            it&rsquo;s now a 10&ndash;12 year decision that may be your last
+            gas appliance. Heat-pumps qualify for the <strong>$1,000 Solar Victoria
+            rebate</strong> plus STCs, dropping a 280L Sanden, Reclaim or
+            Stiebel Eltron unit to roughly $3K&ndash;$4.5K net &mdash; cheaper than
+            replacing gas. We&rsquo;re on the Solar Vic-approved installer list
+            and lodge the rebate paperwork on your behalf.
+          </p>
+        </div>
+        <div>
+          <h3>Older South East suburbs have units hitting the failure curve.</h3>
+          <p>
+            Berwick, Cranbourne, Narre Warren, Hampton Park and Endeavour Hills
+            grew rapidly through the 1990s and 2000s &mdash; meaning a huge
+            swathe of homes have 12&ndash;15 year old gas storage units now at
+            end of life. Rheem Stellars, Bosch internal storage, early Rinnai
+            Infinity 24s are the units we replace 4&ndash;6 times a week.
+            Telltale signs: water around the base of the unit (cylinder leak,
+            not the relief valve), longer recovery times, rusty staining at
+            the tundish. Once the cylinder leaks, it&rsquo;s done.
+          </p>
+        </div>
+        <div>
+          <h3>Sizing for actual peak demand &mdash; not the showroom sticker.</h3>
+          <p>
+            Undersizing is the #1 reason people complain about a new system.
+            We size by family count and simultaneous-outlet demand: a 3-person
+            Berwick household wants a 250L storage tank or a 20L/min
+            instantaneous; a 5-person Endeavour Hills home wants 315&ndash;400L
+            storage or a 26L/min Rinnai Infinity. For heat-pumps the smaller
+            200L tanks recover too slowly &mdash; we default to 280&ndash;300L
+            for 3&ndash;4 person homes. <strong>AS 3500.4</strong> and
+            <strong>AS/NZS 4234</strong> dictate the spec; we follow them.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <span class="section-eyebrow">Service areas</span>
+      <h2>Where we work.</h2>
+      <p class="lead" style="max-width: 42rem; margin-bottom: 1rem;">
+        Full South East Melbourne &mdash; Casey and Cardinia councils plus the
+        Monash &amp; Greater Dandenong fringe. Same-day emergency repairs across
+        every suburb listed.
+      </p>
+      <div class="areas-grid">
+        <a class="area-pill" href="/berwick/">Berwick</a>
+        <a class="area-pill" href="/cranbourne/">Cranbourne</a>
+        <a class="area-pill" href="/narre-warren/">Narre Warren</a>
+        <a class="area-pill" href="/hampton-park/">Hampton Park</a>
+        <a class="area-pill" href="/endeavour-hills/">Endeavour Hills</a>
+        <a class="area-pill" href="/south-east-melbourne/">South East Melbourne</a>
+        <span class="area-pill area-pill-static">Officer</span>
+        <span class="area-pill area-pill-static">Beaconsfield</span>
+        <span class="area-pill area-pill-static">Pakenham</span>
+        <span class="area-pill area-pill-static">Clyde</span>
+        <span class="area-pill area-pill-static">Lynbrook</span>
+        <span class="area-pill area-pill-static">Doveton</span>
+      </div>
+    </div>
+  </section>
+  <figure class="image-banner">
+    <img src="/images/detail.jpg" alt="Hot water control panel close-up" loading="lazy" decoding="async" />
+    <figcaption>Energy-efficient kit. Compliance certificate every time.</figcaption>
+  </figure>
+
+
+  <section class="section section-dark">
+    <div class="section-inner">
+      <span class="section-eyebrow">How it works</span>
+      <h2>From call to hot showers &mdash; 5 stages.</h2>
+
+      <div class="steps">
+        <div class="step"><div class="step-num">1</div><h3>Call or quote form</h3><p>Tell us symptoms (no hot water, leaking, lukewarm) or the unit&rsquo;s age. We diagnose half the calls on the phone.</p></div>
+        <div class="step"><div class="step-num">2</div><h3>Same-day visit</h3><p>For emergencies, we&rsquo;re usually on site within 2&ndash;4 hours. Replacements we book 1&ndash;3 days out.</p></div>
+        <div class="step"><div class="step-num">3</div><h3>Honest call</h3><p>Repair vs replace. We tell you which one is the money-saver &mdash; we don&rsquo;t upsell tanks that have years left.</p></div>
+        <div class="step"><div class="step-num">4</div><h3>Install</h3><p>Repair: 1&ndash;2 hours. Like-for-like swap: 2&ndash;3 hours. Heat-pump or solar conversion: half to full day.</p></div>
+        <div class="step"><div class="step-num">5</div><h3>Rebate &amp; warranty</h3><p>If eligible, we lodge the Solar Vic rebate. Manufacturer warranty plus our 12-month workmanship warranty.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="cta-block">
+        <h2>No hot water? Call us first.</h2>
+        <p>Most callouts diagnosed in 30 minutes. Same-day across the South East.</p>
+        <div class="hero-actions" style="justify-content:center;">
+          <a class="btn btn-primary" href="tel:+61390030108">&#9742; Call (03) 9003 0108</a>
+          <a class="btn btn-ghost" href="/quote/">Book online</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

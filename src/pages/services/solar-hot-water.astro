@@ -1,0 +1,156 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does solar hot water cost installed in South East Melbourne?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A typical 300L roof-mount solar hot water system with gas or electric boost runs $5,500–$7,500 installed before rebates. STCs (small-scale technology certificates) deduct $700–$1,200; the Solar Victoria solar hot water rebate (when active) deducts a further $1,000. Net cost lands $5,000–$7,000 for most South East Melbourne homes. Note: solar hot water is now usually pricier than heat-pump after rebates — we'll honestly compare both for your roof and family." }
+    },
+    {
+      "@type": "Question",
+      "name": "Evacuated tube or flat plate solar collector — which is better?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Evacuated tubes (Apricus, Edwards Solene): higher efficiency in cold weather and on overcast days, individual tubes can be replaced if damaged, slightly more expensive. Flat-plate collectors (Rheem Loline, Solahart): cheaper, more robust to hail, lower-profile on the roof, but slightly less efficient in winter. For Berwick / South East Melbourne — where the coldest July mornings are 2–5°C and overcast — we lean toward evacuated tubes for the winter performance, particularly on south-facing or shaded roofs. Flat plates on a perfect north-facing roof in a sunny suburb also do well." }
+    },
+    {
+      "@type": "Question",
+      "name": "Roof-mount tank or split system (ground-mount tank)?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Close-coupled (tank on roof, next to panels) is gravity-fed, no pump, simplest install — but adds significant weight to the roof (~400kg full) and the tank is exposed to weather. Split system (panels on roof, tank on the ground, glycol pump moves heat between them) is what we mostly install: keeps the tank protected and accessible, easier servicing, no roof loading. Split also works on roofs where the tank wouldn't fit alongside the panels. Cost is similar." }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does solar hot water need a boost?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Solar alone can't guarantee hot water through a week of overcast Melbourne winter weather. Every solar hot water system has either a gas booster (instantaneous gas unit on the cold-water inlet, fires only when needed) or an electric booster (element in the tank, on a timer). Gas boost is cheaper to run if you already have natural gas. Electric boost works anywhere and can be timed for off-peak or aligned with rooftop solar PV. For homes that already have solar PV, electric boost + solar hot water gives almost-free hot water year-round." }
+    },
+    {
+      "@type": "Question",
+      "name": "Which solar hot water brands do you install?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Apricus — Chinese-engineered evacuated tube, Australian-assembled. Strong cold-weather performance. 10-year tank warranty. Rheem Loline / Premier — Australian-made flat plate, long track record, easy to service. Edwards Solene — premium Australian evacuated tube + flat plate, 10-year tank, robust. Solahart Streamline — flat plate, the original Australian brand. We avoid the cheaper imports without local parts support — solar tanks need to last 15–20 years and parts availability matters." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does solar hot water still make sense in 2026 vs heat-pump?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Honest answer: heat-pump now wins for most South East Melbourne homes — lower install cost after the $1,000 Solar Vic heat-pump rebate, easier roof, less weight, no need for gas boost. Solar hot water still wins where: (1) you have an existing solar HW system that just needs the tank or panels replaced (keep the proven layout); (2) you have a perfect north-facing roof and want maximum self-sufficiency; (3) you have solar PV already and want electric-boosted solar HW for almost-zero running cost; (4) you don't want a heat-pump compressor humming outside. We'll honestly compare both." }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does solar hot water installation take?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Full new install: a full day, sometimes two — roof panels mounted, flashings sealed, glycol loop run, ground tank set, gas or electric boost commissioned, controls programmed. Tank-only replacement (existing panels stay): half a day. Panel-only replacement (existing tank stays): half a day. We pull a permit only if the roof structure needs reinforcement for close-coupled tanks; most installs are exempt." }
+    }
+  ]
+};
+---
+<Layout
+  title="Solar Hot Water Berwick | Apricus, Rheem Loline, Edwards | (03) 9003 0108"
+  description="Solar hot water installation across Berwick, Cranbourne, Narre Warren, Hampton Park, Endeavour Hills. Evacuated tube or flat plate, gas or electric boost. Apricus, Rheem Loline, Edwards. STCs + Solar Vic rebates lodged in-house. $5K–$7K net."
+  canonical="https://sehotwater.com.au/services/solar-hot-water/">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  </Fragment>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="hero-eyebrow">Evacuated tube &middot; Flat plate &middot; Gas or electric boost</span>
+      <h1>Solar hot water in <span class="accent">Berwick &amp; the South East</span>.</h1>
+      <p class="hero-sub">
+        Roof-mount evacuated tubes or flat-plate panels with gas or electric
+        boost. Apricus, Rheem Loline, Edwards, Solahart. STCs claimed and the
+        Solar Vic rebate lodged on your behalf. Best suited to north-facing
+        roofs in homes that want true energy self-sufficiency.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="tel:+61390030108">&#9742; Call (03) 9003 0108</a>
+        <a class="btn btn-ghost" href="/quote/">Book a free quote</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <h2>Collector and brand comparison.</h2>
+      <div class="divider"></div>
+      <div style="max-width: 65rem;">
+        <h3>Evacuated tube.</h3>
+        <ul>
+          <li><strong>Apricus 30-tube + 315L tank:</strong> Best winter performance, evacuated tubes hold efficiency in cold and overcast weather. Tubes replaceable individually if a stone or hail breaks one. ~$6.5K&ndash;$7.5K installed.</li>
+          <li><strong>Edwards Solene Titan:</strong> Premium Australian brand, robust frame, 10-year tank warranty. ~$7K&ndash;$8K.</li>
+        </ul>
+
+        <h3 style="margin-top: 2rem;">Flat plate.</h3>
+        <ul>
+          <li><strong>Rheem Loline 270 / 300:</strong> Australian-made, split-system layout (tank on ground, panels on roof). Easier servicing. ~$5.5K&ndash;$6.5K.</li>
+          <li><strong>Rheem Premier:</strong> Close-coupled (tank on roof). Simpler but adds roof load. ~$5.5K&ndash;$6.5K.</li>
+          <li><strong>Solahart Streamline:</strong> The original Australian solar HW brand. Flat plate, close-coupled or split. ~$5.5K&ndash;$7K.</li>
+        </ul>
+
+        <h3 style="margin-top: 2rem;">Boost.</h3>
+        <p>
+          Every solar hot water system needs a backup &mdash; either an inline gas
+          booster (Rinnai Infinity 16/20 fires only when solar can&rsquo;t meet
+          demand) or an electric element in the tank on a timer. Electric boost
+          pairs beautifully with rooftop solar PV; gas boost makes sense if you
+          already have a strong natural gas line and a recent meter.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="section-inner">
+      <h2>Is solar still the right call in 2026?</h2>
+      <div class="divider"></div>
+      <div style="max-width: 65rem;">
+        <p>
+          Honest comparison: after rebates, a heat-pump now lands cheaper than
+          solar hot water for most South East Melbourne homes. The $1,000
+          Solar Victoria heat-pump rebate plus STCs drops a 280L heat-pump to
+          ~$3K&ndash;$4.5K net &mdash; that&rsquo;s typically $1.5K&ndash;$2.5K
+          less than solar hot water net.
+        </p>
+        <p>
+          Solar hot water still wins where: (1) you have an existing solar HW
+          system that just needs the tank or panels replaced (keep the proven
+          layout, no boring the roof); (2) you have a perfect north-facing roof
+          and want maximum solar self-sufficiency; (3) you already have rooftop
+          solar PV and want electric-boosted solar HW for near-zero running
+          cost; (4) you don&rsquo;t want a heat-pump compressor humming outside.
+        </p>
+        <p>
+          We&rsquo;ll quote both on the same call. Whichever wins for your roof
+          and family, that&rsquo;s what we install.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <h2>Standards &amp; warranties.</h2>
+      <div class="divider"></div>
+      <ul style="max-width: 60rem;">
+        <li><strong>AS 3500.4</strong> &mdash; Heated water services.</li>
+        <li><strong>AS/NZS 2712</strong> &mdash; Solar and heat-pump water heaters design and construction.</li>
+        <li><strong>AS/NZS 4234</strong> &mdash; Thermal performance for STC eligibility.</li>
+        <li><strong>Tank warranty:</strong> Apricus 10yr, Rheem 10yr, Edwards 10yr, Solahart 10yr.</li>
+        <li><strong>Panel / tube warranty:</strong> 10&ndash;15yr depending on brand.</li>
+        <li><strong>Our workmanship warranty:</strong> 12 months on the install.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="cta-block">
+        <h2>Solar hot water quote &mdash; or honest comparison with heat-pump.</h2>
+        <p>STCs and Solar Vic rebates deducted upfront. Both options costed on the same call.</p>
+        <div class="hero-actions" style="justify-content:center;">
+          <a class="btn btn-primary" href="tel:+61390030108">&#9742; Call (03) 9003 0108</a>
+          <a class="btn btn-ghost" href="/quote/">Book online</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

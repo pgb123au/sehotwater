@@ -1,0 +1,227 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which trade do I need first when replacing a hot water system in Berwick?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a like-for-like gas or electric storage swap, just us — a licensed plumber + gasfitter handles everything in 2–3 hours. For a heat-pump conversion from electric storage, the existing off-peak circuit usually carries over but we'll confirm the breaker rating and isolation switch on site; a separate sparkie is rarely needed. For a heat-pump conversion from gas, we coordinate with a licensed electrician to run a new dedicated 10A or 15A circuit from the switchboard — that's usually a half-day add-on. For a full solar hot water install we coordinate with a roofer if the existing roof is older Colorbond or terracotta tile that needs flashing care under the panel brackets."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a council permit to replace a hot water system in South East Melbourne?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — straight replacement of a hot water unit in the same location is exempt from building permits under the Building Regulations 2018. The VBA-licensed plumber lodges a compliance certificate (Form 4) with the Victorian Building Authority within 5 business days of completion; that's the only paperwork required. Relocating the unit (e.g. moving an indoor cupboard install to outside, or repositioning a heat-pump compressor) doesn't usually need a permit either, but does need a sign-off from a registered plumber that the new location meets AS 3500.4 clearance and venting requirements. We handle the compliance certificate as part of the job."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the $1,000 Solar Victoria heat-pump rebate actually work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It's claimed by a Solar Victoria-approved installer (us) on your behalf, not by you directly. You pay the discounted price up-front — $1,000 less than the standard installed price — and we recoup the rebate from Solar Vic after lodging the paperwork. Eligibility (as of 2026): owner-occupier, Victorian home valued under $3M, household income under $210,000, and you must be replacing a working hot water system (not a new build). The heat-pump must be on the Solar Vic approved product list — Sanden, Reclaim, Stiebel Eltron, iStore and most Rheem Ambipower models qualify. We confirm eligibility before quoting. The program is being progressively wound back as Victoria moves off gas, so the window is shrinking."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you coordinate with electricians and roofers on heat-pump and solar installs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Heat-pump from gas usually needs a dedicated 10A or 15A circuit — we coordinate with a local licensed electrician who can usually attend the same day or next morning. Solar hot water roof installs need flashing care under the panel brackets, especially on older terracotta tiles; we use a Berwick-based roof plumber for the panel mount and waterproofing, while we handle the tank, valves, controller and gas/electric boost wiring. One quote, one job manager, one warranty — we sort the trade coordination."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where can I check that my hot water plumber is licensed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Victorian Building Authority public register at vba.vic.gov.au lists every licensed plumber and gasfitter. Any work involving a gas connection (instantaneous, storage gas, gas-boost solar) must be performed by a Type A gasfitter — anyone offering to do it without that licence is uninsurable and you're personally liable if it leaks or fails. Always ask for the licence number, then verify it on the VBA register before signing anything. Our licence number is on every quote."
+      }
+    }
+  ]
+};
+---
+<Layout
+  title="Local SE Melbourne Trades We Coordinate With | SE Hot Water"
+  description="The South East Melbourne trades we coordinate with on heat-pump, gas and solar hot water installs — licensed electricians, roof plumbers, plus the VBA, Solar Vic and standards references every homeowner should bookmark."
+  canonical="https://sehotwater.com.au/local-trades/">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  </Fragment>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="hero-eyebrow">Trades we work with on hot water jobs</span>
+      <h1>Local <span class="accent">South East Melbourne trades</span> we coordinate with.</h1>
+      <p class="hero-sub">
+        Most hot water jobs are us start-to-finish &mdash; but heat-pump conversions
+        from gas, and full solar hot water installs, bring in an electrician or
+        a roof plumber. Below are the trades we coordinate with regularly, plus
+        the VBA, Solar Victoria and standards references every homeowner should
+        bookmark before signing a quote.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="tel:+61390030108">&#9742; Call (03) 9003 0108</a>
+        <a class="btn btn-ghost" href="/quote/">Free hot water quote</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <span class="section-eyebrow">In-network trades</span>
+      <h2>The two trades we coordinate with most.</h2>
+      <div class="divider"></div>
+      <div style="max-width:65rem;">
+        <h3>Licensed electricians &mdash; heat-pump circuit installs.</h3>
+        <p>
+          Converting a gas unit to a heat-pump usually means running a new
+          dedicated circuit (10A or 15A depending on the model) from the
+          switchboard out to the new compressor location. Existing electric
+          storage circuits typically carry over to a heat-pump fine, but the
+          breaker rating and isolation switch get verified on site. We work
+          with local A-grade electricians who can usually attend the same day
+          or next morning, and the circuit goes in before we bring the new
+          unit on site. One licensed plumber, one licensed electrician, one
+          compliance certificate path &mdash; no chasing trades.
+        </p>
+
+        <h3 style="margin-top:2rem;">Roof plumbers &mdash; solar hot water panel installs.</h3>
+        <p>
+          Solar hot water panels (evacuated tube or flat plate) bolt through
+          the roof onto the rafters and need flashing care to stay watertight
+          for the next 20 years. On older terracotta tile or 1990s Colorbond
+          roofs we use a Berwick-based roof plumber for the bracket mount and
+          flashing, while we handle the tank, valves, glycol or potable water
+          loop, controller and gas-boost or electric-boost wiring. Roof
+          plumber owns the waterproofing, we own the hot water system &mdash;
+          clear scope, clear warranties.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:#f9fafb;">
+    <div class="section-inner">
+      <span class="section-eyebrow">VBA, Solar Vic &amp; standards</span>
+      <h2>The regulatory references for SE Melbourne hot water work.</h2>
+      <div class="divider"></div>
+      <div style="max-width:65rem;">
+        <p>
+          We point homeowners to these resources constantly &mdash; particularly
+          the Solar Victoria rebate eligibility page and the gas substitution
+          roadmap, which together drive most of the gas-vs-heat-pump decisions
+          across Berwick, Cranbourne, Narre Warren, Hampton Park and Endeavour Hills.
+        </p>
+        <ul style="margin-top:1rem;">
+          <li style="margin-bottom:0.75rem;">
+            <strong>Solar Victoria &mdash; Hot Water Systems Rebate</strong>
+            &mdash; the $1,000 rebate on approved heat-pumps for owner-occupiers.
+            Lists the approved product list and current eligibility criteria.
+            <a href="https://www.solar.vic.gov.au/hot-water-rebate" target="_blank" rel="external noopener">solar.vic.gov.au</a>
+          </li>
+          <li style="margin-bottom:0.75rem;">
+            <strong>Victoria&rsquo;s Gas Substitution Roadmap</strong>
+            &mdash; the policy framework progressively phasing gas out of
+            Victorian homes from 2024. Important context for any like-for-like
+            gas replacement decision today.
+            <a href="https://www.energy.vic.gov.au/renewable-energy/victorias-gas-substitution-roadmap" target="_blank" rel="external noopener">energy.vic.gov.au</a>
+          </li>
+          <li style="margin-bottom:0.75rem;">
+            <strong>AS/NZS 3500.4 &mdash; Plumbing and drainage: Heated water
+            services</strong> &mdash; the Australian Standard governing hot
+            water system installation, including tempering valves at outlets,
+            relief valve drainage, and sizing for peak demand. The standard
+            every licensed plumber works to.
+            <a href="https://store.standards.org.au/" target="_blank" rel="external noopener">Standards Australia</a>
+          </li>
+          <li style="margin-bottom:0.75rem;">
+            <strong>AS/NZS 4234 &mdash; Heated water systems &mdash; Calculation
+            of energy consumption</strong> &mdash; the Australian Standard
+            referenced by Solar Vic for heat-pump and solar hot water energy
+            ratings. Determines the STC (small-scale technology certificate)
+            value of each approved system.
+            <a href="https://store.standards.org.au/" target="_blank" rel="external noopener">Standards Australia</a>
+          </li>
+          <li style="margin-bottom:0.75rem;">
+            <strong>Australian Building Codes Board (ABCB) &mdash; Plumbing
+            Code of Australia</strong> &mdash; sits above AS 3500 and references
+            it for hot water installation requirements. The plain-English
+            homeowner reference for the regulatory framework.
+            <a href="https://www.abcb.gov.au/" target="_blank" rel="external noopener">abcb.gov.au</a>
+          </li>
+          <li style="margin-bottom:0.75rem;">
+            <strong>Victorian Building Authority (VBA)</strong> &mdash; public
+            register of licensed plumbers and Type A gasfitters. Any gas hot
+            water work must be performed by a Type A gasfitter &mdash; verify
+            before booking.
+            <a href="https://www.vba.vic.gov.au/" target="_blank" rel="external noopener">vba.vic.gov.au</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <span class="section-eyebrow">Frequently asked</span>
+      <h2>How a hot water job sequences when other trades are involved.</h2>
+      <div class="divider"></div>
+      <div style="max-width:65rem;">
+        <h3>Electrician first or plumber first?</h3>
+        <p>
+          For a gas-to-heat-pump conversion, the electrician runs the dedicated
+          circuit out to the new compressor location first &mdash; usually a
+          half-day job, signed off and isolation switch installed. Then we
+          arrive the next day (or same day for a fast job), decommission the
+          gas unit, cap the gas line, mount the heat-pump, plumb tank-to-house
+          and connect the controller to the new circuit. One licensed plumber,
+          one licensed electrician, two compliance certificates lodged with the
+          VBA. We coordinate the timing so you only lose hot water for half a day.
+        </p>
+        <h3 style="margin-top:1.5rem;">When does the Solar Vic rebate get applied?</h3>
+        <p>
+          Before quoting. We confirm eligibility (owner-occupier, household
+          income, property value, working existing unit) on the phone or first
+          site visit, then quote you the discounted price &mdash; $1,000 less
+          than RRP installed. You pay the discounted figure; we lodge the
+          rebate paperwork with Solar Vic in the week following installation
+          and recoup it on our end. You see one number on the invoice, no
+          rebate-claim hoops to jump through yourself.
+        </p>
+        <h3 style="margin-top:1.5rem;">Do I need a compliance certificate copy?</h3>
+        <p>
+          Yes &mdash; we lodge a VBA Form 4 (Compliance Certificate) within
+          5 business days of completion and email you a copy. Keep it with
+          your house records; you&rsquo;ll need it for insurance claims, sale
+          settlement vendor statements, and any future gas appliance work.
+          For gas-to-heat-pump conversions you also receive a separate gas
+          decommissioning certificate &mdash; required by Energy Safe Victoria
+          when a gas line is capped.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--ink);color:#fff;">
+    <div class="section-inner" style="text-align:center;">
+      <h2 style="color:#fff;">Free quote &mdash; honest SE Melbourne hot water pricing.</h2>
+      <p style="opacity:0.85;max-width:50rem;margin:1rem auto 2rem;">
+        Gas, heat-pump, solar or electric. $1,000 Solar Vic rebate lodged for
+        you. VBA-licensed plumber + gasfitter on every job, with electrician
+        and roof plumber coordination on heat-pump and solar installs.
+      </p>
+      <div class="hero-actions" style="justify-content:center;">
+        <a class="btn btn-primary" href="tel:+61390030108">&#9742; (03) 9003 0108</a>
+        <a class="btn btn-ghost" href="/quote/">Get a fixed quote</a>
+      </div>
+    </div>
+  </section>
+</Layout>

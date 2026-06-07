@@ -1,0 +1,237 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogType?: string;
+}
+
+const SITE = 'https://sehotwater.com.au';
+const PHONE_DISPLAY = '(03) 9003 0108';
+const PHONE_TEL = '+61390030108';
+const EMAIL = 'quotes@sehotwater.com.au';
+const BIZ_NAME = 'SE Hot Water';
+
+const { title, description, canonical = SITE + '/', ogType = 'website' } = Astro.props;
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "PlumbingService",
+  "@id": SITE + "/#business",
+  "name": BIZ_NAME,
+  "image": SITE + "/images/og-image.jpg",
+  "url": SITE,
+  "telephone": PHONE_TEL,
+  "priceRange": "$$",
+  "description": "Hot water specialists for South East Melbourne — gas, heat-pump, solar and electric hot water systems plus same-day repairs. Servicing Berwick, Cranbourne, Narre Warren, Hampton Park and Endeavour Hills. VBA-registered plumbers and gasfitters. Solar Victoria-approved heat-pump installers.",
+  "areaServed": [
+    { "@type": "City", "name": "Berwick", "containedInPlace": { "@type": "AdministrativeArea", "name": "South East Melbourne" } },
+    { "@type": "City", "name": "Cranbourne" },
+    { "@type": "City", "name": "Narre Warren" },
+    { "@type": "City", "name": "Hampton Park" },
+    { "@type": "City", "name": "Endeavour Hills" },
+    { "@type": "City", "name": "Officer" },
+    { "@type": "City", "name": "Beaconsfield" },
+    { "@type": "City", "name": "Pakenham" },
+    { "@type": "City", "name": "Clyde" }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Berwick",
+    "addressRegion": "VIC",
+    "postalCode": "3806",
+    "addressCountry": "AU"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -38.0395,
+    "longitude": 145.3458
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "opens": "07:00",
+    "closes": "18:00"
+  }],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Hot Water Installation & Repair Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gas Hot Water Installation" }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Heat-Pump Hot Water Installation" }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Solar Hot Water Installation" }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Electric Hot Water Installation" }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hot Water Repairs" }}
+    ]
+  }
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": SITE + "/#website",
+  "url": SITE + "/",
+  "name": BIZ_NAME,
+  "inLanguage": "en-AU",
+  "publisher": { "@id": SITE + "/#business" }
+};
+// BreadcrumbList JSON-LD auto-generated from Astro.url.pathname
+const pathname = Astro.url.pathname;
+const breadcrumbSegments = pathname.split('/').filter(Boolean);
+const breadcrumbItems = [{ "@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/" }];
+let cumulative = SITE;
+breadcrumbSegments.forEach((seg, i) => {
+  cumulative += '/' + seg;
+  // Human-friendly name: kebab → Title Case, special-case 'services' → Services
+  const friendly = seg === 'services'
+    ? 'Services'
+    : seg.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+  breadcrumbItems.push({
+    "@type": "ListItem",
+    "position": i + 2,
+    "name": friendly,
+    "item": cumulative + '/'
+  });
+});
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": breadcrumbItems
+};
+
+---
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  <link rel="canonical" href={canonical}>
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="theme-color" content="#28160E">
+
+  <meta property="og:type" content={ogType}>
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:url" content={canonical}>
+  <meta property="og:locale" content="en_AU">
+  <meta property="og:site_name" content={BIZ_NAME}>
+  <meta property="og:image" content={SITE + "/images/og-image.jpg"}>
+  <meta property="og:image:secure_url" content={SITE + "/images/og-image.jpg"}>
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content={BIZ_NAME + " — same-day hot water repairs and installs"}>
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content={title}>
+  <meta name="twitter:description" content={description}>
+  <meta name="twitter:image" content={SITE + "/images/og-image.jpg"}>
+  <meta name="twitter:image:alt" content={BIZ_NAME + " — same-day hot water repairs and installs"}>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&family=Playfair+Display:wght@900&family=Stardos+Stencil:wght@700&display=swap">
+
+  <meta name="google-site-verification" content="NcHyUdUlpAh7C4rMei2M6WYJ3sfJjEwK_YP7WgsWtmQ">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', {
+      'send_page_view': true,
+      'anonymize_ip': true
+    });
+  </script>
+
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <slot name="head" />
+</head>
+<body class="site-sehotwater narrative-the_crew fv-1">
+  <div class="top-bar">
+    <span>Same-day hot water repairs &middot; Berwick &middot; Cranbourne &middot; Narre Warren &middot; Call <a href={`tel:${PHONE_TEL}`}>{PHONE_DISPLAY}</a></span>
+  </div>
+
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="/" aria-label="SE Hot Water home">
+        <img src="/images/logo.svg" alt="SE Hot Water" width="320" height="80" decoding="async">
+      </a>
+      <ul class="nav-links">
+        <li><a href="/services/gas-hot-water/">Gas</a></li>
+        <li><a href="/services/heat-pump-hot-water/">Heat Pump</a></li>
+        <li><a href="/services/solar-hot-water/">Solar</a></li>
+        <li><a href="/services/electric-hot-water/">Electric</a></li>
+        <li><a href="/services/hot-water-repairs/">Repairs</a></li>
+        <li><a href="/south-east-melbourne/">Areas</a></li>
+      </ul>
+      <a class="nav-cta" href="/quote/">Free Quote</a>
+    </div>
+  </header>
+
+  <main>
+    <slot />
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <h4>SE Hot Water</h4>
+        <p style="margin-bottom: 0.75rem;">Hot water specialists across South East Melbourne — gas, heat-pump, solar, electric and same-day repairs. VBA-registered plumbers and gasfitters. Solar Victoria-approved heat-pump installers.</p>
+        <p style="margin-bottom: 0.5rem;"><strong style="color:#fff;">Phone:</strong> <a href={`tel:${PHONE_TEL}`}>{PHONE_DISPLAY}</a></p>
+        <p style="margin-bottom: 0.5rem;"><strong style="color:#fff;">Hours:</strong> Mon&ndash;Sat 7am&ndash;6pm &middot; Emergency on call</p>
+        <p style="margin-bottom: 0.5rem;"><strong style="color:#fff;">Service area:</strong> Berwick VIC 3806 &amp; the South East</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/gas-hot-water/">Gas hot water</a></li>
+          <li><a href="/services/heat-pump-hot-water/">Heat-pump hot water</a></li>
+          <li><a href="/services/solar-hot-water/">Solar hot water</a></li>
+          <li><a href="/services/electric-hot-water/">Electric hot water</a></li>
+          <li><a href="/services/hot-water-repairs/">Hot water repairs</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Service Areas</h4>
+        <ul>
+          <li><a href="/berwick/">Berwick</a></li>
+          <li><a href="/cranbourne/">Cranbourne</a></li>
+          <li><a href="/narre-warren/">Narre Warren</a></li>
+          <li><a href="/hampton-park/">Hampton Park</a></li>
+          <li><a href="/endeavour-hills/">Endeavour Hills</a></li>
+          <li><a href="/south-east-melbourne/">All South East Melbourne</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="/pricing/">Pricing guide</a></li>
+          <li><a href="/local-trades/">Local trades directory</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-bottom">
+      &copy; {new Date().getFullYear()} {BIZ_NAME} &middot; Yes Right Pty Ltd ABN 91 664 546 061. Same-day hot water repairs and installs across South East Melbourne.
+     &middot; <a href="/about/">About</a> &middot; <a href="/privacy/">Privacy</a></p>
+  </footer>
+
+  <a class="mobile-phone" href={`tel:${PHONE_TEL}`} aria-label={`Call ${PHONE_DISPLAY}`}>
+    <span aria-hidden="true">&#9742;</span> Call {PHONE_DISPLAY}
+  </a>
+</body>
+</html>

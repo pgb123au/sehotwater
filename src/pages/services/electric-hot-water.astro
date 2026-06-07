@@ -1,0 +1,156 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is electric storage hot water still worth installing in 2026?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Only in specific cases: (1) like-for-like emergency replacement when you need hot water back today and don't want to wait for heat-pump install; (2) tightly constrained budgets where the $1.5K–$2.2K upfront cost beats the $3K+ heat-pump even net of rebates; (3) homes already running on rooftop solar PV with significant export, where the electric element is essentially powered by free daytime sun. For everyone else in 2026, heat-pump is the better long-term call — runs at one-third the cost of electric storage." }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does an electric hot water system cost installed?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Electric storage 125L $1,500–$1,800 installed (Rheem, Dux, Aquamax). 250L $1,700–$2,000. 315L $1,900–$2,200. 400L $2,100–$2,500. Most South East Melbourne homes need 250–315L for a 3–4 person family on off-peak. Single-element or twin-element variants — twin gives faster boost recovery for high-use periods. Like-for-like swaps take 2–3 hours." }
+    },
+    {
+      "@type": "Question",
+      "name": "Off-peak (Tariff 31) or continuous (Tariff 11) for electric hot water?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Off-peak is cheaper — typically 12–15c/kWh vs 25–30c/kWh continuous in Victoria. Off-peak only heats overnight, so you need a tank large enough to last 24 hours (usually a step up in size: 315L if you'd otherwise install 250L). Continuous heats anytime, smaller tank works, but you pay full daytime rates. For most off-peak-connected Berwick / Cranbourne / Narre Warren homes we go off-peak with a 315L tank. Confirm your meter has the off-peak supply before assuming — older homes sometimes don't." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I convert electric to heat-pump and keep the same plumbing?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes — this is now the most common upgrade we do across the South East. The existing electric storage tank gets removed, the heat-pump replaces it in roughly the same footprint (integrated unit) or with the compressor placed nearby (split system). Existing water plumbing reused. Electrical: most heat-pumps run on the same 10A single-phase circuit as the old electric storage, though some larger split-systems want a 15A circuit. Switchboard tidy-up if needed. Conversion takes 4–6 hours. Net cost with rebates often only $1K–$2K more than a like-for-like electric replacement — and the running cost saving pays for itself in 3–5 years." }
+    },
+    {
+      "@type": "Question",
+      "name": "Which electric hot water brands do you install?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Rheem Optima / Stellar (250–400L) — Australian-made, sacrificial anode, 7-year cylinder warranty. The default Australian electric storage choice. Dux Proflo (135–315L) — Australian-made, slightly cheaper than Rheem, good track record. Aquamax (160–400L) — also Australian-made, twin-element variants available for faster recovery. We avoid the cheaper imported units — they look the same but the cylinder steel is thinner and the anode is undersized. Cylinder life on the cheap ones is often half the Australian-made equivalents." }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I replace the anode in my existing electric tank?",
+      "acceptedAnswer": { "@type": "Answer", "text": "If your existing electric tank is 5–10 years old and otherwise sound, yes — replacing the anode rod is the single most effective thing you can do to extend the cylinder's life. The anode is sacrificial: it corrodes preferentially so the cylinder doesn't. Once the anode is depleted (5–7 years typical), the cylinder starts rusting from the inside out. We can replace anodes on most tanks for $250–$400 if there's clearance above the tank to extract the old rod. If the tank is already leaking water, it's too late — replace the tank." }
+    },
+    {
+      "@type": "Question",
+      "name": "How long do electric hot water tanks last?",
+      "acceptedAnswer": { "@type": "Answer", "text": "10–15 years for an Australian-made tank that's had its anode replaced once around year 6. 8–12 years if the anode was never replaced. 5–8 years for cheap imported tanks. Telltale signs of impending failure: rusty water at the tap when the hot has been off for a while, water around the base of the tank (cylinder leak, not relief valve), longer recovery times, popping or banging noises from the tank (sediment build-up). Once the cylinder itself leaks, it can't be repaired — replace it." }
+    }
+  ]
+};
+---
+<Layout
+  title="Electric Hot Water Berwick | Storage, Off-Peak, Conversion | (03) 9003 0108"
+  description="Electric hot water installation and replacement across Berwick, Cranbourne, Narre Warren, Hampton Park, Endeavour Hills. Rheem, Dux, Aquamax 125–400L storage. Off-peak conversion. Heat-pump upgrade pathway. $1.5K–$2.2K installed."
+  canonical="https://sehotwater.com.au/services/electric-hot-water/">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  </Fragment>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="hero-eyebrow">Storage &middot; Off-peak &middot; Heat-pump conversion path</span>
+      <h1>Electric hot water in <span class="accent">Berwick &amp; the South East</span>.</h1>
+      <p class="hero-sub">
+        Rheem, Dux, Aquamax storage tanks 125&ndash;400L. Like-for-like emergency
+        replacement, off-peak retrofits, or the conversion path to a heat-pump
+        when you&rsquo;re ready. VBA-registered electrician on every install.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="tel:+61390030108">&#9742; Call (03) 9003 0108</a>
+        <a class="btn btn-ghost" href="/quote/">Book a free quote</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <h2>Brand &amp; tank sizing.</h2>
+      <div class="divider"></div>
+      <div style="max-width: 65rem;">
+        <ul>
+          <li><strong>Rheem Optima / Stellar 250 / 315 / 400:</strong> Australian-made, 7-year cylinder warranty, sacrificial anode, robust. ~$1.7K&ndash;$2.4K installed.</li>
+          <li><strong>Dux Proflo 250 / 315:</strong> Australian-made, marginally cheaper than Rheem. ~$1.6K&ndash;$2.1K.</li>
+          <li><strong>Aquamax 160 / 250 / 400:</strong> Twin-element variants for faster recovery. ~$1.7K&ndash;$2.3K.</li>
+        </ul>
+
+        <h3 style="margin-top: 2rem;">Sizing by household and tariff.</h3>
+        <p>
+          On <strong>off-peak (Tariff 31)</strong> &mdash; only heats overnight, so
+          tank must hold a full day&rsquo;s use:<br>
+          1&ndash;2 people: 250L. 3 people: 315L. 4&ndash;5 people: 315&ndash;400L.
+        </p>
+        <p>
+          On <strong>continuous (Tariff 11)</strong> &mdash; heats any time, tank
+          recovers through the day:<br>
+          1&ndash;2 people: 125&ndash;160L. 3 people: 250L. 4&ndash;5 people: 250&ndash;315L.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="section-inner">
+      <h2>The heat-pump conversion path.</h2>
+      <div class="divider"></div>
+      <div style="max-width: 65rem;">
+        <p>
+          For most owner-occupiers in 2026, the smarter long-term call is to
+          convert from electric storage to heat-pump. The maths:
+        </p>
+        <ul>
+          <li><strong>Electric storage running cost (4-person Berwick home, off-peak):</strong> ~$700&ndash;$1,000/year.</li>
+          <li><strong>Heat-pump running cost (same household):</strong> ~$250&ndash;$400/year.</li>
+          <li><strong>Annual saving:</strong> ~$450&ndash;$700.</li>
+          <li><strong>Net heat-pump install cost (after Solar Vic + STCs):</strong> $3K&ndash;$4.5K.</li>
+          <li><strong>Net electric like-for-like install:</strong> $1.5K&ndash;$2.2K.</li>
+          <li><strong>Payback on the heat-pump premium:</strong> 3&ndash;5 years.</li>
+        </ul>
+        <p>
+          The conversion itself reuses your existing water plumbing and (in
+          most cases) your existing 10A circuit. Total install 4&ndash;6 hours.
+          See our <a href="/services/heat-pump-hot-water/">heat-pump page</a> for
+          model recommendations.
+        </p>
+        <p>
+          When does electric still make sense? Emergency replacements where you
+          want hot water back today, tight budgets where the upfront beats the
+          long-term, or rental properties where the owner won&rsquo;t fund the
+          better unit.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <h2>Standards &amp; warranties.</h2>
+      <div class="divider"></div>
+      <ul style="max-width: 60rem;">
+        <li><strong>AS 3500.4</strong> &mdash; Heated water services plumbing.</li>
+        <li><strong>AS/NZS 3000</strong> &mdash; Wiring rules (electrical).</li>
+        <li><strong>AS/NZS 4234</strong> &mdash; Thermal performance.</li>
+        <li><strong>Cylinder warranty:</strong> Rheem 7yr, Dux 7yr, Aquamax 7yr.</li>
+        <li><strong>Element warranty:</strong> 12 months.</li>
+        <li><strong>Our workmanship warranty:</strong> 12 months on the install.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="cta-block">
+        <h2>Electric hot water &mdash; or the heat-pump alternative.</h2>
+        <p>We&rsquo;ll quote both. Whichever wins for your budget and home, that&rsquo;s what we install.</p>
+        <div class="hero-actions" style="justify-content:center;">
+          <a class="btn btn-primary" href="tel:+61390030108">&#9742; Call (03) 9003 0108</a>
+          <a class="btn btn-ghost" href="/quote/">Book online</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

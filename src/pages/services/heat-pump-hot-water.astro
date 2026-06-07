@@ -1,0 +1,161 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does a heat-pump hot water system cost in South East Melbourne after rebates?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A 280L heat-pump (Sanden, Reclaim or Stiebel Eltron) costs $4,000–$5,500 installed before rebates. After the $1,000 Solar Victoria rebate plus STCs (small-scale technology certificates, typically $700–$1,100 depending on the model and zone), the net cost lands between $3,000 and $4,500. We claim both on your behalf — you don't lodge anything yourself, you just see the net price on the quote." }
+    },
+    {
+      "@type": "Question",
+      "name": "Am I eligible for the $1,000 Solar Victoria heat-pump rebate?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Eligibility (as of 2026): owner-occupier of a Victorian home valued under $3M; combined household income under $210,000; existing working hot water system being replaced (not a new build); the heat-pump model is on the Solar Vic approved list; and the installer is Solar Vic-accredited. We're on the list. The program has been paused and reopened in batches and is being progressively wound back as Victoria electrifies — if you're considering one, the window is shrinking." }
+    },
+    {
+      "@type": "Question",
+      "name": "How much cheaper is heat-pump to run than gas or electric?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Heat-pumps use a refrigeration cycle to extract ambient heat from the air, delivering 3–4 units of heat for every 1 unit of electricity (a COP of 3–4). Compared at current Victorian energy prices: heat-pump runs roughly 30% of the cost of an electric storage unit, and approximately 70% cheaper than gas continuous (taking gas standing charges and rising gas prices into account). Annual running cost for a 4-person Berwick household: heat-pump $250–$400, gas $700–$1,000, electric storage $900–$1,300." }
+    },
+    {
+      "@type": "Question",
+      "name": "Which heat-pump brands do you recommend?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sanden Eco — Japanese, CO2 refrigerant (low GWP), 15-year tank warranty, split-system (compressor outside, tank inside or out), 315L most common. The premium choice. Reclaim Energy — also CO2 refrigerant, Australian-assembled tank, split-system, slightly cheaper than Sanden. Stiebel Eltron WWK — German, integrated (compressor on top of tank), simpler install, R290 refrigerant. iStore (now Rinnai EHPA) — entry level, integrated, R134a refrigerant, decent value if you don't need split-system. We avoid the cheaper imports — they pass the rebate test but the compressors fail within 3–5 years." }
+    },
+    {
+      "@type": "Question",
+      "name": "How noisy is a heat-pump and where do you put it?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Modern heat-pumps run around 45–55 dB at 1m — quieter than a fridge, similar to an outdoor air-conditioner condenser. Integrated units (compressor on top of tank) need to live outside or in a garage with good ventilation; they're slightly louder than split-systems because everything is in one unit. Split-systems separate the compressor (outdoor) from the tank (indoor or outdoor) — quieter at the tank, quieter for neighbours. For Berwick, Cranbourne, Narre Warren and Hampton Park homes with tight side setbacks, we usually place the compressor near the existing gas meter or AC condenser, never under bedroom windows." }
+    },
+    {
+      "@type": "Question",
+      "name": "What size heat-pump tank do I need?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Heat-pump tanks recover slower than electric or gas storage, so undersizing causes lukewarm-shower problems. Sizing: 1–2 people 170–200L, 3 people 250L, 4 people 280–315L, 5+ people 315L plus or two units. The smaller 170L tanks suit small couples or single-person homes only. For most South East Melbourne 3–4 person families we default to the 280L Reclaim or 315L Sanden — the extra storage means you never run out and gives the heat-pump plenty of off-peak window to recover cheaply." }
+    },
+    {
+      "@type": "Question",
+      "name": "Will a heat-pump work in winter in Berwick?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes — modern heat-pumps from quality brands (Sanden, Reclaim, Stiebel Eltron) are rated for ambient temperatures down to -10°C. Coldest winter mornings in Berwick rarely drop below -2°C. The COP (efficiency) does drop in cold weather (from 4+ in summer to maybe 2.5 at 5°C ambient) but the system still produces hot water — it just uses a bit more electricity. Cheaper R134a units degrade more in the cold; CO2-refrigerant units (Sanden, Reclaim) hold efficiency better. Bottom line: a properly-sized heat-pump in Berwick comfortably handles winter." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a heat-pump need a special electrical circuit?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Most integrated heat-pumps run on a standard 10A single-phase circuit (same as your existing electric hot water). Some larger split-systems need a 15A or 20A dedicated circuit. We check your switchboard during the quote — if a new circuit or RCBO is needed, that's $200–$400 extra. Heat-pumps can be programmed to run on off-peak electricity tariff (or aligned with solar PV) for maximum savings. We set the timer at install based on your tariff." }
+    }
+  ]
+};
+---
+<Layout
+  title="Heat-Pump Hot Water Berwick | $1,000 Solar Vic Rebate | (03) 9003 0108"
+  description="Heat-pump hot water installation across Berwick, Cranbourne, Narre Warren, Hampton Park, Endeavour Hills. Sanden, Reclaim, Stiebel Eltron. 70% cheaper to run than gas. $1,000 Solar Victoria rebate + STCs lodged on your behalf. Net $3K–$4.5K."
+  canonical="https://sehotwater.com.au/services/heat-pump-hot-water/">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  </Fragment>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="hero-eyebrow">Solar Vic-approved &middot; STCs claimed &middot; 70% cheaper to run</span>
+      <h1>Heat-pump hot water <span class="accent">with the $1,000 rebate done for you</span>.</h1>
+      <p class="hero-sub">
+        Sanden, Reclaim, Stiebel Eltron. 280L or 315L for most Berwick, Cranbourne,
+        Narre Warren and Hampton Park families. Net $3K&ndash;$4.5K after the
+        Solar Victoria rebate plus STCs &mdash; we claim both on your behalf and
+        deduct them from the quote. 70% cheaper to run than gas.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="tel:+61390030108">&#9742; Call (03) 9003 0108</a>
+        <a class="btn btn-ghost" href="/quote/">Book a free quote</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <h2>Heat-pump brand comparison.</h2>
+      <div class="divider"></div>
+      <div style="max-width: 65rem;">
+        <ul>
+          <li><strong>Sanden Eco (315L):</strong> Premium pick. Japanese, CO2 refrigerant (R744, low GWP, holds COP in cold weather), split-system, 15-year tank warranty. ~$5K&ndash;$5.5K installed, net ~$4K after rebates.</li>
+          <li><strong>Reclaim Energy (250L / 315L):</strong> CO2 refrigerant, Australian-assembled tank, split-system. Very similar performance to Sanden, slightly cheaper. ~$4.5K&ndash;$5K installed, net ~$3.5K&ndash;$4K after rebates.</li>
+          <li><strong>Stiebel Eltron WWK (300L):</strong> German engineering, R290 refrigerant, integrated (compressor on tank), simpler install, lifetime build. ~$4.5K installed, net ~$3.5K.</li>
+          <li><strong>Rinnai EHPA / iStore (270L):</strong> Entry-level integrated. R134a refrigerant. OK for budget builds but doesn&rsquo;t hold COP in cold weather as well. ~$3.5K&ndash;$4K installed, net ~$2.5K&ndash;$3K.</li>
+        </ul>
+
+        <h3 style="margin-top: 2rem;">Tank sizing.</h3>
+        <p>
+          <strong>1&ndash;2 people:</strong> 170&ndash;200L.<br>
+          <strong>3 people:</strong> 250L.<br>
+          <strong>4 people:</strong> 280&ndash;315L.<br>
+          <strong>5+ people:</strong> 315L plus or two units.
+        </p>
+        <p>
+          Heat-pumps recover slower than gas or electric storage. We default a
+          step larger than the equivalent electric storage size &mdash; cheaper
+          to oversize than to live with lukewarm showers in winter.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="section-inner">
+      <h2>The Solar Victoria rebate &mdash; what we handle.</h2>
+      <div class="divider"></div>
+      <div style="max-width: 65rem;">
+        <p>
+          Eligibility (2026): owner-occupier of a Victorian home valued under
+          $3M, household income under $210,000, existing working hot water
+          system being replaced (not a new build), approved heat-pump model,
+          Solar Vic-accredited installer.
+        </p>
+        <p>
+          What we do: confirm eligibility on the call, run the eligibility check
+          before booking the install, lodge the rebate application on the
+          Solar Vic portal, deduct the $1,000 from your quote (you don&rsquo;t
+          pay it then claim &mdash; we discount upfront), assign STCs to our
+          agent who pays us the certificate value (also deducted from your
+          quote). Paperwork stays with us.
+        </p>
+        <p>
+          The program has been paused and reopened in batches the last two
+          years. We confirm rebate availability at the time of booking
+          &mdash; if it&rsquo;s temporarily paused, we lock the price and
+          install when it reopens, or proceed without and credit you if it
+          reopens within 60 days.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <h2>Standards &amp; warranties.</h2>
+      <div class="divider"></div>
+      <ul style="max-width: 60rem;">
+        <li><strong>AS 3500.4</strong> &mdash; Heated water services plumbing.</li>
+        <li><strong>AS/NZS 4234</strong> &mdash; Heated water systems thermal performance. Drives the energy rating.</li>
+        <li><strong>AS/NZS 60335.2.40</strong> &mdash; Heat-pump appliance safety.</li>
+        <li><strong>Tank warranty:</strong> Sanden 15yr, Reclaim 7yr, Stiebel 10yr, Rinnai 7yr.</li>
+        <li><strong>Compressor warranty:</strong> Sanden / Reclaim 6yr, Stiebel 5yr, Rinnai 3yr.</li>
+        <li><strong>Our workmanship warranty:</strong> 12 months on the install.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="cta-block">
+        <h2>Get the heat-pump quote &mdash; net price after rebates.</h2>
+        <p>Solar Vic + STCs deducted upfront. Honest brand call, sized for your family.</p>
+        <div class="hero-actions" style="justify-content:center;">
+          <a class="btn btn-primary" href="tel:+61390030108">&#9742; Call (03) 9003 0108</a>
+          <a class="btn btn-ghost" href="/quote/">Book online</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,113 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://sehotwater.com.au/about/#founder",
+  "name": "Karim Saade",
+  "givenName": "Karim",
+  "familyName": "Saade",
+  "jobTitle": "Principal & Founder",
+  "worksFor": {
+    "@id": "https://sehotwater.com.au/#business"
+  },
+  "description": "Karim Saade is the principal and founder of SE Hot Water, with 16 years of hot water systems experience in SE Melbourne."
+};
+---
+<Layout
+  title="About SE Hot Water — Karim Saade, principal & founder"
+  description="Karim Saade runs SE Hot Water from SE Melbourne — 16 years in hot water systems. VBA-licensed Class A Plumber + Gas. Meet the principal who quotes your job and runs the crew."
+  canonical="https://sehotwater.com.au/about/">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
+  </Fragment>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="hero-eyebrow">About SE Hot Water</span>
+      <h1>Karim Saade &mdash; <span class="accent">16 years</span> in hot water systems across SE Melbourne.</h1>
+      <p class="hero-sub">
+        The principal who quotes your job, runs the crew, and answers his own phone after hours.
+        VBA-licensed Class A Plumber + Gas.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="tel:+61390030108">&#9742; Call (03) 9003 0108</a>
+        <a class="btn btn-ghost" href="/quote/">Free quote</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <span class="section-eyebrow">The principal</span>
+      <h2>How SE Hot Water actually works.</h2>
+      <div class="divider"></div>
+      <div style="max-width:65rem;">
+        <p>The crew on a SE Melbourne hot water systems job is the same crew that quoted it — Karim (the principal, 16 years on the tools), plus two-to-four hands who have been with the business between three and nine years. We don't sub work out to a chasing-cheap labour-hire mob, we don't have a roster of itinerant fly-in workers, and we don't put apprentices on a job without a registered tradesperson actively supervising. The continuity is the work.</p>
+
+        <h3 style="margin-top:2rem;">The SE Melbourne side of it.</h3>
+        <p>
+          SE Melbourne is not a market we read about; it's the market we live in. Karim
+          is a long-time Hawthorn supporter &mdash; the kind of detail that doesn't fit on a quote but does explain why the
+          crew is on time, why the price doesn't drift, and why we'd rather pass a job to a mate than
+          do work in a suburb we don't know. Every quote we issue is from someone you can put a face to.
+        </p>
+
+        <h3 style="margin-top:2rem;">Credentials &amp; memberships.</h3>
+        <ul style="margin-top:1rem;">
+          <li style="margin-bottom:0.5rem;">VBA-licensed Class A Plumber + Gas</li><li style="margin-bottom:0.5rem;">Master Plumbers member</li>
+          <li style="margin-bottom:0.5rem;">Public liability + workmanship insurance current; certificates available on request.</li>
+          <li style="margin-bottom:0.5rem;">Written, fixed-price quotes (no "from $X" range pricing).</li>
+          <li style="margin-bottom:0.5rem;">Same-person quoting and supervision &mdash; not a call-centre handoff.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:#f9fafb;">
+    <div class="section-inner">
+      <span class="section-eyebrow">How we operate</span>
+      <h2>What makes a SE Hot Water job different.</h2>
+      <div class="divider"></div>
+      <div style="max-width:65rem;">
+        <h3>One person, start to finish.</h3>
+        <p>
+          Karim quotes the job and runs the crew that does the job. There is no
+          handover, no junior estimator who lowballs the quote then upcharges on the day, and no
+          third-party project manager who hasn't been on a job site in five years. If you ring at 7pm
+          on a Wednesday, you get the person who's going to be on your property on Monday morning.
+        </p>
+
+        <h3 style="margin-top:1.5rem;">Written, fixed-price quotes.</h3>
+        <p>
+          Every quote we issue is all-inclusive &mdash; site assessment, weather risk, access risk,
+          permit work if relevant. No "from $X" range pricing, no day-of-build surprise variations, no
+          mid-job upsell. If a surprise lands on the dig that we did not allow for, it's our cost, not yours.
+        </p>
+
+        <h3 style="margin-top:1.5rem;">A crew that stays the same.</h3>
+        <p>
+          The SE Melbourne crew is the same five people it has been for four years. We don't sub work out
+          to chase-cheap labour-hire crews, we don't put apprentices on a job without a registered
+          tradesperson actively supervising, and we don't run a roster of fly-in workers. Continuity
+          is what makes the work hold up at the 10-year mark.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--ink);color:#fff;">
+    <div class="section-inner" style="text-align:center;">
+      <h2 style="color:#fff;">Talk to Karim directly.</h2>
+      <p style="opacity:0.85;max-width:50rem;margin:1rem auto 2rem;">
+        Quotes are free, fixed-price and same-person. Phones go to Karim between
+        7am and 7pm; after hours leave a message and we'll call back the next morning.
+      </p>
+      <div class="hero-actions" style="justify-content:center;">
+        <a class="btn btn-primary" href="tel:+61390030108">&#9742; (03) 9003 0108</a>
+        <a class="btn btn-ghost" href="/quote/">Get a fixed quote</a>
+      </div>
+    </div>
+  </section>
+</Layout>
